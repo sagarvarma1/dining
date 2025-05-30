@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import data from './fine-dining-dataset.json';
+import detailedData from './detailed_info.json';
 import './App.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     // Extract all unique reservation dates and sort them
     const reservationDates = new Set();
     
-    data.diners.forEach(diner => {
+    detailedData.diners.forEach(diner => {
       diner.reservations.forEach(reservation => {
         reservationDates.add(reservation.date);
       });
@@ -31,7 +31,7 @@ function App() {
     // Get reservations for current date
     const reservations = [];
     
-    data.diners.forEach(diner => {
+    detailedData.diners.forEach(diner => {
       diner.reservations.forEach(reservation => {
         if (reservation.date === currentDate) {
           reservations.push({
@@ -237,28 +237,102 @@ function App() {
                   <span className="party-size">{reservation.number_of_people} guests</span>
                 </div>
                 
-                <div className="reservation-details">
-                  <div className="orders">
-                    <h5>Orders:</h5>
-                    <ul>
-                      {reservation.orders.map((order, orderIndex) => (
-                        <li key={orderIndex} className="order-item">
-                          <span className="item-name">{order.item}</span>
-                          <span className="item-price">${order.price}</span>
-                          {order.dietary_tags.length > 0 && (
-                            <div className="dietary-tags">
-                              {order.dietary_tags.map((tag, tagIndex) => (
-                                <span key={tagIndex} className="dietary-tag">
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
+                <div className="orders-compact">
+                  <h5>Orders:</h5>
+                  <div className="orders-row">
+                    {reservation.orders.map((order, orderIndex) => (
+                      <div key={orderIndex} className="order-compact">
+                        <span className="item-name">{order.item}</span>
+                        <span className="item-price">${order.price}</span>
+                        {order.dietary_tags.length > 0 && (
+                          <div className="dietary-tags">
+                            {order.dietary_tags.map((tag, tagIndex) => (
+                              <span key={tagIndex} className="dietary-tag">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
+
+                {reservation.notes && (
+                  <div className="ai-insights">
+                    {reservation.notes.summary && (
+                      <div className="insight-summary">
+                        <strong>Summary:</strong> {reservation.notes.summary}
+                      </div>
+                    )}
+
+                    {reservation.notes.customer_insights && (
+                      <div className="insights-grid">
+                        {reservation.notes.customer_insights.customer_values && (
+                          <div className="insight-item">
+                            <span className="insight-label">Values:</span>
+                            <div className="insight-tags">
+                              {reservation.notes.customer_insights.customer_values.map((value, idx) => (
+                                <span key={idx} className="insight-tag values">{value}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {reservation.notes.customer_insights.hasOwnProperty('is_new_customer') && (
+                          <div className="insight-item">
+                            <span className="insight-label">Customer Type:</span>
+                            <span className={`insight-badge ${reservation.notes.customer_insights.is_new_customer ? 'new' : 'returning'}`}>
+                              {reservation.notes.customer_insights.is_new_customer ? 'New Customer' : 'Returning Customer'}
+                            </span>
+                          </div>
+                        )}
+
+                        {reservation.notes.customer_insights.special_accommodations && (
+                          <div className="insight-item">
+                            <span className="insight-label">Special Needs:</span>
+                            <div className="insight-tags">
+                              {reservation.notes.customer_insights.special_accommodations.map((accommodation, idx) => (
+                                <span key={idx} className="insight-tag accommodations">{accommodation}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {reservation.notes.customer_insights.taste_preferences && (
+                          <div className="insight-item">
+                            <span className="insight-label">Taste:</span>
+                            <span className={`insight-badge taste-${reservation.notes.customer_insights.taste_preferences}`}>
+                              {reservation.notes.customer_insights.taste_preferences}
+                            </span>
+                          </div>
+                        )}
+
+                        {reservation.notes.customer_insights.staff_interaction_preferences && (
+                          <div className="insight-item">
+                            <span className="insight-label">Staff Style:</span>
+                            <div className="insight-tags">
+                              {reservation.notes.customer_insights.staff_interaction_preferences.map((pref, idx) => (
+                                <span key={idx} className="insight-tag staff">{pref}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {reservation.notes.customer_insights.personal_interests && (
+                          <div className="insight-item">
+                            <span className="insight-label">Interests:</span>
+                            <div className="insight-tags">
+                              {reservation.notes.customer_insights.personal_interests.map((interest, idx) => (
+                                <span key={idx} className="insight-tag interests">{interest}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             ))
           )}

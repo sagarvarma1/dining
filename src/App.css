@@ -245,9 +245,10 @@ body {
   justify-content: center;
   background: white;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all 0.2s ease;
   position: relative;
+  min-height: 45px;
 }
 
 .calendar-day.empty {
@@ -547,4 +548,215 @@ body {
   transition: all 0.2s ease;
   position: relative;
   min-height: 45px;
+}
+
+/* Compact Orders Styling */
+.orders-compact {
+  margin-bottom: 1.5rem;
+}
+
+.orders-compact h5 {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.orders-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.order-compact {
+  background: #faf9f7;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 180px;
+  flex: 1;
+}
+
+.order-compact .item-name {
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+.order-compact .item-price {
+  font-weight: 600;
+  color: #c9a96e;
+  font-size: 0.9rem;
+}
+
+.order-compact .dietary-tags {
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.order-compact .dietary-tag {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* AI Insights Styling */
+.ai-insights {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  border-left: 4px solid #c9a96e;
+}
+
+.insight-summary {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2c3e50;
+  border-left: 3px solid #3498db;
+}
+
+.insight-summary strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.insight-item {
+  background: white;
+  padding: 0.875rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.insight-label {
+  display: block;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.insight-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.insight-tag {
+  padding: 0.3rem 0.7rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+}
+
+.insight-tag.values {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.insight-tag.accommodations {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.insight-tag.staff {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.insight-tag.interests {
+  background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+}
+
+.insight-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.insight-badge.new {
+  background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+  color: white;
+}
+
+.insight-badge.returning {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+}
+
+.insight-badge.taste-sweet {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+}
+
+.insight-badge.taste-spicy {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: white;
+}
+
+.insight-badge.taste-savory {
+  background: linear-gradient(135deg, #795548 0%, #5d4037 100%);
+  color: white;
+}
+
+.insight-badge.taste-rich {
+  background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
+  color: white;
+}
+
+.insight-badge.taste-light {
+  background: linear-gradient(135deg, #81c784 0%, #66bb6a 100%);
+  color: white;
+}
+
+/* Responsive adjustments for AI insights */
+@media (max-width: 768px) {
+  .orders-row {
+    flex-direction: column;
+  }
+  
+  .order-compact {
+    min-width: unset;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .ai-insights {
+    padding: 1rem;
+  }
+  
+  .insight-summary {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .insight-item {
+    padding: 0.75rem;
+  }
 } 
