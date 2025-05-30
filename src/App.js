@@ -66,15 +66,38 @@ function App() {
     const earliestDate = new Date(availableDates[0]);
     const latestDate = new Date(availableDates[availableDates.length - 1]);
     
-    // Create calendar months to display
-    const months = [];
+    // Create calendar months to display in chronological order
+    const allMonths = [];
     const current = new Date(earliestDate.getFullYear(), earliestDate.getMonth(), 1);
     const end = new Date(latestDate.getFullYear(), latestDate.getMonth() + 1, 0);
     
     while (current <= end) {
-      months.push(new Date(current));
+      allMonths.push(new Date(current));
       current.setMonth(current.getMonth() + 1);
     }
+
+    // Find the current date's month for initial display
+    const currentSelectedDate = new Date(currentDate);
+    const initialMonthIndex = allMonths.findIndex(month => 
+      month.getFullYear() === currentSelectedDate.getFullYear() && 
+      month.getMonth() === currentSelectedDate.getMonth()
+    );
+
+    const [currentMonthIndex, setCurrentMonthIndex] = useState(
+      initialMonthIndex >= 0 ? initialMonthIndex : 0
+    );
+
+    const goToPreviousMonth = () => {
+      if (currentMonthIndex > 0) {
+        setCurrentMonthIndex(currentMonthIndex - 1);
+      }
+    };
+
+    const goToNextMonth = () => {
+      if (currentMonthIndex < allMonths.length - 1) {
+        setCurrentMonthIndex(currentMonthIndex + 1);
+      }
+    };
 
     const renderMonth = (monthDate) => {
       const year = monthDate.getFullYear();
@@ -109,10 +132,29 @@ function App() {
       }
 
       return (
-        <div key={`${year}-${month}`} className="calendar-month">
-          <h3 className="month-header">
-            {monthDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
-          </h3>
+        <div className="single-calendar-month">
+          <div className="month-navigation">
+            <button 
+              onClick={goToPreviousMonth}
+              disabled={currentMonthIndex === 0}
+              className="month-nav-button"
+            >
+              ←
+            </button>
+            
+            <h3 className="month-header">
+              {monthDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+            </h3>
+            
+            <button 
+              onClick={goToNextMonth}
+              disabled={currentMonthIndex === allMonths.length - 1}
+              className="month-nav-button"
+            >
+              →
+            </button>
+          </div>
+          
           <div className="weekday-headers">
             {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
               <div key={day} className="weekday-header">{day}</div>
@@ -127,7 +169,7 @@ function App() {
 
     return (
       <div className="calendar-overlay">
-        <div className="calendar-modal">
+        <div className="calendar-modal single-month">
           <div className="calendar-header">
             <h2>Select Date</h2>
             <button 
@@ -147,8 +189,8 @@ function App() {
               <span>Selected Date</span>
             </div>
           </div>
-          <div className="calendar-months">
-            {months.map(renderMonth)}
+          <div className="single-month-container">
+            {renderMonth(allMonths[currentMonthIndex])}
           </div>
         </div>
       </div>
