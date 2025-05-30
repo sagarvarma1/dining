@@ -58,7 +58,7 @@ def test_single_customer():
         print(json.dumps(insights, indent=2))
         
         # Validate the structure
-        expected_fields = ["customer_values", "is_new_customer", "special_accommodations", "taste_preferences", "staff_interaction_preferences"]
+        expected_fields = ["customer_values", "is_new_customer", "special_accommodations", "taste_preferences", "staff_interaction_preferences", "personal_interests"]
         present_fields = list(insights.keys())
         
         print(f"\n📊 Analysis Results:")
@@ -72,6 +72,8 @@ def test_single_customer():
                 print(f"   Taste preference detected: {insights['taste_preferences']}")
             if "staff_interaction_preferences" in insights:
                 print(f"   Staff interaction preferences: {', '.join(insights['staff_interaction_preferences'])}")
+            if "personal_interests" in insights:
+                print(f"   Personal interests: {', '.join(insights['personal_interests'])}")
         else:
             print("⚠️  No confident insights generated (this is normal for conservative analysis)")
         

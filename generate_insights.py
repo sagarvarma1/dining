@@ -44,7 +44,8 @@ def generate_customer_insights(diner_data: Dict[str, Any]) -> Dict[str, Any]:
     "is_new_customer": true/false,
     "special_accommodations": ["accommodation1", "accommodation2"],
     "taste_preferences": "sweet/spicy/savory/rich/light/null",
-    "staff_interaction_preferences": ["chatty", "professional", "knowledgeable", "friendly"]
+    "staff_interaction_preferences": ["chatty", "professional", "knowledgeable", "friendly"],
+    "personal_interests": ["interest1", "interest2", "interest3"]
 }}
 
 Guidelines:
@@ -53,6 +54,7 @@ Guidelines:
 - special_accommodations: Any special needs like wheelchair access, birthday celebrations, quiet tables, etc. Only if explicitly mentioned.
 - taste_preferences: Determine if they prefer "sweet", "spicy", "savory", "rich", or "light" foods based on what they enjoyed in reviews. Use "null" if unclear.
 - staff_interaction_preferences: What they like about staff interactions based on positive mentions - "chatty", "professional", "knowledgeable", "friendly", "enthusiastic", "attentive". Only include if clearly mentioned in reviews.
+- personal_interests: Things they mention enjoying or being interested in from their reviews - "art", "science", "desserts", "wine", "sports", "travel", "music", "local culture", "history", etc. Only include if explicitly mentioned.
 
 Customer Data:
 {context}
@@ -157,6 +159,9 @@ def process_reservations():
             
             if customer_insights.get("staff_interaction_preferences"):
                 summary_parts.append(f"Likes staff who are: {', '.join(customer_insights['staff_interaction_preferences'])}")
+            
+            if customer_insights.get("personal_interests"):
+                summary_parts.append(f"Personal interests: {', '.join(customer_insights['personal_interests'])}")
             
             summary = ". ".join(summary_parts) if summary_parts else "No specific insights available"
             

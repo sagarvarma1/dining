@@ -10,6 +10,7 @@ The script generates **conservative insights** including:
 - **Special Accommodations**: Birthday celebrations, wheelchair access, quiet tables, etc.
 - **Taste Preferences**: Specific taste profile - "sweet", "spicy", "savory", "rich", or "light" (only if clearly evident)
 - **Staff Interaction Preferences**: What customers like about staff - "chatty", "professional", "knowledgeable", "friendly", "enthusiastic", "attentive"
+- **Personal Interests**: Things customers mention enjoying - "art", "science", "desserts", "wine", "sports", "travel", "music", "local culture", etc.
 
 **Important**: This script uses a **conservative approach** - it only includes insights when there is clear evidence in the customer data. Empty fields mean the data wasn't conclusive enough to make a confident determination.
 
@@ -72,10 +73,11 @@ Each reservation in the output file will have a new `notes` field. **Only confid
       "is_new_customer": false,
       "special_accommodations": ["birthday celebration"],
       "taste_preferences": "sweet",
-      "staff_interaction_preferences": ["chatty", "knowledgeable"]
+      "staff_interaction_preferences": ["chatty", "knowledgeable"],
+      "personal_interests": ["art", "wine", "local culture"]
     },
     "generated_at": "2024-01-15T10:30:00.000000",
-    "summary": "Values: personalized service, conversation. Returning customer. Special needs: birthday celebration. Taste preference: sweet. Likes staff who are: chatty, knowledgeable."
+    "summary": "Values: personalized service, conversation. Returning customer. Special needs: birthday celebration. Taste preference: sweet. Likes staff who are: chatty, knowledgeable. Personal interests: art, wine, local culture."
   }
 }
 ```
@@ -88,6 +90,7 @@ Each reservation in the output file will have a new `notes` field. **Only confid
 - **Staff Preferences**: Only includes when customers explicitly mention positive staff interactions
 - **Customer Values**: Only includes when clearly stated in reviews
 - **Special Accommodations**: Only when explicitly mentioned in emails or reviews
+- **Personal Interests**: Only includes interests explicitly mentioned in reviews (e.g., art exhibits, wine knowledge, sports teams, local attractions)
 
 ## Processing Time
 
