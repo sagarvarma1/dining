@@ -1,0 +1,229 @@
+import React, { useState, useEffect } from 'react';
+import data from './fine-dining-dataset.json';
+import './App.css';
+
+function App() {
+  const [currentDate, setCurrentDate] = useState('');
+  const [availableDates, setAvailableDates] = useState([]);
+  const [reservationsForDate, setReservationsForDate] = useState([]);
+  const [showCalendar, setShowCalendar] = useState(false);
+
+  useEffect(() => {
+    // Extract all unique reservation dates and sort them
+    const reservationDates = new Set();
+    
+    data.diners.forEach(diner => {
+      diner.reservations.forEach(reservation => {
+        reservationDates.add(reservation.date);
+      });
+    });
+
+    const sortedDates = Array.from(reservationDates).sort();
+    setAvailableDates(sortedDates);
+    
+    // Set to earliest date
+    if (sortedDates.length > 0) {
+      setCurrentDate(sortedDates[0]);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Get reservations for current date
+    const reservations = [];
+    
+    data.diners.forEach(diner => {
+      diner.reservations.forEach(reservation => {
+        if (reservation.date === currentDate) {
+          reservations.push({
+            ...reservation,
+            guestName: diner.name,
+            guestData: diner
+          });
+        }
+      });
+    });
+
+    setReservationsForDate(reservations);
+  }, [currentDate]);
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const selectDateFromCalendar = (dateString) => {
+    setCurrentDate(dateString);
+    setShowCalendar(false);
+  };
+
+  const Calendar = () => {
+    // Get the date range for the calendar
+    const earliestDate = new Date(availableDates[0]);
+    const latestDate = new Date(availableDates[availableDates.length - 1]);
+    
+    // Create calendar months to display
+    const months = [];
+    const current = new Date(earliestDate.getFullYear(), earliestDate.getMonth(), 1);
+    const end = new Date(latestDate.getFullYear(), latestDate.getMonth() + 1, 0);
+    
+    while (current <= end) {
+      months.push(new Date(current));
+      current.setMonth(current.getMonth() + 1);
+    }
+
+    const renderMonth = (monthDate) => {
+      const year = monthDate.getFullYear();
+      const month = monthDate.getMonth();
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      const startingDayOfWeek = firstDay.getDay();
+
+      const days = [];
+      
+      // Add empty cells for days before the first day of the month
+      for (let i = 0; i < startingDayOfWeek; i++) {
+        days.push(<div key={`empty-${i}`} className="calendar-day empty"></div>);
+      }
+      
+      // Add days of the month
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const hasReservation = availableDates.includes(dateString);
+        const isSelected = dateString === currentDate;
+        
+        days.push(
+          <div 
+            key={day} 
+            className={`calendar-day ${hasReservation ? 'has-reservation' : ''} ${isSelected ? 'selected' : ''}`}
+            onClick={() => hasReservation && selectDateFromCalendar(dateString)}
+          >
+            {day}
+          </div>
+        );
+      }
+
+      return (
+        <div key={`${year}-${month}`} className="calendar-month">
+          <h3 className="month-header">
+            {monthDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+          </h3>
+          <div className="weekday-headers">
+            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+              <div key={day} className="weekday-header">{day}</div>
+            ))}
+          </div>
+          <div className="calendar-grid">
+            {days}
+          </div>
+        </div>
+      );
+    };
+
+    return (
+      <div className="calendar-overlay">
+        <div className="calendar-modal">
+          <div className="calendar-header">
+            <h2>Select Date</h2>
+            <button 
+              className="close-calendar"
+              onClick={() => setShowCalendar(false)}
+            >
+              ✕
+            </button>
+          </div>
+          <div className="calendar-legend">
+            <div className="legend-item">
+              <div className="legend-color has-reservation"></div>
+              <span>Has Reservations</span>
+            </div>
+            <div className="legend-item">
+              <div className="legend-color selected"></div>
+              <span>Selected Date</span>
+            </div>
+          </div>
+          <div className="calendar-months">
+            {months.map(renderMonth)}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  if (showCalendar) {
+    return <Calendar />;
+  }
+
+  return (
+    <div className="app">
+      <header className="header">
+        <h1>French Laudure</h1>
+        <div className="date-navigation">
+          <div className="current-date">
+            <h2>{formatDate(currentDate)}</h2>
+            <button 
+              onClick={() => setShowCalendar(true)}
+              className="calendar-button"
+            >
+              See Calendar
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main className="main-content">
+        <div className="reservations-summary">
+          <h3>Today's Reservations: {reservationsForDate.length} parties</h3>
+          <p>Total guests: {reservationsForDate.reduce((sum, res) => sum + res.number_of_people, 0)}</p>
+        </div>
+
+        <div className="reservations-list">
+          {reservationsForDate.length === 0 ? (
+            <div className="no-reservations">
+              <p>No reservations for this date.</p>
+            </div>
+          ) : (
+            reservationsForDate.map((reservation, index) => (
+              <div key={index} className="reservation-card">
+                <div className="reservation-header">
+                  <h4>{reservation.guestName}</h4>
+                  <span className="party-size">{reservation.number_of_people} guests</span>
+                </div>
+                
+                <div className="reservation-details">
+                  <div className="orders">
+                    <h5>Orders:</h5>
+                    <ul>
+                      {reservation.orders.map((order, orderIndex) => (
+                        <li key={orderIndex} className="order-item">
+                          <span className="item-name">{order.item}</span>
+                          <span className="item-price">${order.price}</span>
+                          {order.dietary_tags.length > 0 && (
+                            <div className="dietary-tags">
+                              {order.dietary_tags.map((tag, tagIndex) => (
+                                <span key={tagIndex} className="dietary-tag">
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export default App; 
