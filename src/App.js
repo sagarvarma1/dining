@@ -260,12 +260,6 @@ function App() {
 
                 {reservation.notes && (
                   <div className="ai-insights">
-                    {reservation.notes.summary && (
-                      <div className="insight-summary">
-                        <strong>Summary:</strong> {reservation.notes.summary}
-                      </div>
-                    )}
-
                     {reservation.notes.customer_insights && (
                       <div className="insights-grid">
                         {reservation.notes.customer_insights.customer_values && (

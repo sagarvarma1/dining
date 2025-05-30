@@ -6,20 +6,19 @@
 
 body {
   font-family: 'Georgia', 'Times New Roman', serif;
-  background-color: #faf9f7;
-  color: #2c2c2c;
+  background-color: white;
+  color: #000;
 }
 
 .app {
   min-height: 100vh;
-  background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%);
+  background: white;
 }
 
 .header {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: #000;
   color: white;
   padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
@@ -28,15 +27,9 @@ body {
   font-weight: 400;
   letter-spacing: 3px;
   margin-bottom: 1.5rem;
-  color: #f5f3f0;
+  color: white;
   font-family: 'Brush Script MT', 'Lucida Handwriting', 'Apple Chancery', cursive;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-style: italic;
-  background: linear-gradient(45deg, #f5f3f0, #c9a96e, #f5f3f0);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .date-navigation {
@@ -55,24 +48,24 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .calendar-button {
-  background: linear-gradient(135deg, #c9a96e 0%, #b8935a 100%);
-  color: white;
-  border: none;
+  background: white;
+  color: #000;
+  border: 2px solid #000;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(201, 169, 110, 0.3);
 }
 
 .calendar-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4);
+  background: #000;
+  color: white;
 }
 
 /* Calendar Styles */
@@ -91,12 +84,12 @@ body {
 
 .calendar-modal {
   background: white;
+  border: 2px solid #000;
   border-radius: 12px;
   padding: 2rem;
   max-width: 90vw;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -106,7 +99,7 @@ body {
   align-items: center;
   margin: -2rem -2rem 1.5rem -2rem;
   padding: 2rem 2rem 1rem 2rem;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #000;
   position: sticky;
   top: -2rem;
   background: white;
@@ -117,16 +110,16 @@ body {
 
 .calendar-header h2 {
   font-size: 1.8rem;
-  color: #1a1a1a;
+  color: #000;
   font-weight: 400;
 }
 
 .close-calendar {
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid #ddd;
+  background: white;
+  border: 2px solid #000;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #666;
+  color: #000;
   padding: 0.75rem;
   border-radius: 50%;
   transition: all 0.2s ease;
@@ -135,16 +128,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
   z-index: 20;
 }
 
 .close-calendar:hover {
-  background: rgba(255, 255, 255, 1);
-  color: #1a1a1a;
-  border-color: #c9a96e;
-  transform: scale(1.1);
+  background: #000;
+  color: white;
 }
 
 .calendar-legend {
@@ -159,24 +148,24 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #000;
 }
 
 .legend-color {
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  border: 2px solid #ddd;
+  border: 2px solid #000;
 }
 
 .legend-color.has-reservation {
-  background: linear-gradient(135deg, #c9a96e 0%, #b8935a 100%);
-  border-color: #b8935a;
+  background: #000;
+  border-color: #000;
 }
 
 .legend-color.selected {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  border-color: #1a1a1a;
+  background: #000;
+  border-color: #000;
 }
 
 .calendar-months {
@@ -187,29 +176,28 @@ body {
 }
 
 .calendar-month {
-  background: #faf9f7;
+  background: white;
+  border: 2px solid #000;
   border-radius: 8px;
   padding: 1rem;
   transition: all 0.3s ease;
 }
 
 .calendar-month.current-month {
-  background: linear-gradient(135deg, #f5f3f0 0%, #e8e6e3 100%);
-  border: 2px solid #c9a96e;
-  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.2);
-  transform: scale(1.02);
+  background: white;
+  border: 3px solid #000;
 }
 
 .month-header {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 1.2rem;
-  color: #1a1a1a;
+  color: #000;
   font-weight: 500;
 }
 
 .current-indicator {
-  color: #c9a96e;
+  color: #000;
   font-size: 0.9rem;
   font-weight: 600;
   font-style: italic;
@@ -227,7 +215,7 @@ body {
   padding: 0.5rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #666;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -244,6 +232,7 @@ body {
   align-items: center;
   justify-content: center;
   background: white;
+  border: 1px solid #000;
   border-radius: 4px;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -253,54 +242,54 @@ body {
 
 .calendar-day.empty {
   background: transparent;
+  border: none;
 }
 
 .calendar-day.has-reservation {
-  background: linear-gradient(135deg, #c9a96e 0%, #b8935a 100%);
+  background: #000;
   color: white;
   cursor: pointer;
   font-weight: 600;
 }
 
 .calendar-day.has-reservation:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4);
+  background: #333;
 }
 
 .calendar-day.selected {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: #000;
   color: white;
   font-weight: 600;
 }
 
 .calendar-day.selected.has-reservation {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.5);
+  background: #000;
+  border: 3px solid #000;
 }
 
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  background: white;
 }
 
 .reservations-summary {
   background: white;
   padding: 1.5rem;
+  border: 2px solid #000;
   border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #c9a96e;
 }
 
 .reservations-summary h3 {
-  color: #1a1a1a;
+  color: #000;
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
 .reservations-summary p {
-  color: #666;
+  color: #000;
   font-size: 1.1rem;
 }
 
@@ -315,28 +304,26 @@ body {
   text-align: center;
   padding: 3rem;
   background: white;
+  border: 2px solid #000;
   border-radius: 12px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 }
 
 .no-reservations p {
   font-size: 1.2rem;
-  color: #666;
+  color: #000;
   font-style: italic;
 }
 
 .reservation-card {
   background: white;
+  border: 2px solid #000;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #c9a96e;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .reservation-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .reservation-header {
@@ -345,17 +332,17 @@ body {
   align-items: center;
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
 }
 
 .reservation-header h4 {
   font-size: 1.3rem;
-  color: #1a1a1a;
+  color: #000;
   font-weight: 500;
 }
 
 .party-size {
-  background: linear-gradient(135deg, #c9a96e 0%, #b8935a 100%);
+  background: #000;
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
@@ -364,7 +351,7 @@ body {
 }
 
 .reservation-details h5 {
-  color: #1a1a1a;
+  color: #000;
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
   font-weight: 500;
@@ -380,7 +367,8 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding: 0.75rem;
-  background: #faf9f7;
+  background: white;
+  border: 1px solid #000;
   border-radius: 8px;
   margin-bottom: 0.5rem;
   flex-wrap: wrap;
@@ -388,13 +376,13 @@ body {
 
 .item-name {
   font-weight: 500;
-  color: #1a1a1a;
+  color: #000;
   flex: 1;
 }
 
 .item-price {
   font-weight: 600;
-  color: #c9a96e;
+  color: #000;
   margin-left: 1rem;
 }
 
@@ -463,12 +451,12 @@ body {
 
 .calendar-modal.single-month {
   background: white;
+  border: 2px solid #000;
   border-radius: 12px;
   padding: 2rem;
   max-width: 600px;
   max-height: 700px;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -488,12 +476,13 @@ body {
   align-items: center;
   margin-bottom: 1.5rem;
   padding: 1.5rem 2rem;
-  background: #faf9f7;
+  background: white;
+  border: 2px solid #000;
   border-radius: 12px;
 }
 
 .month-nav-button {
-  background: linear-gradient(135deg, #c9a96e 0%, #b8935a 100%);
+  background: #000;
   color: white;
   border: none;
   padding: 1rem;
@@ -502,7 +491,6 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(201, 169, 110, 0.3);
   width: 50px;
   height: 50px;
   display: flex;
@@ -511,21 +499,18 @@ body {
 }
 
 .month-nav-button:hover:not(:disabled) {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 12px rgba(201, 169, 110, 0.4);
+  background: #333;
 }
 
 .month-nav-button:disabled {
   background: #ccc;
   cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
 }
 
 .month-header {
   text-align: center;
   font-size: 1.6rem;
-  color: #1a1a1a;
+  color: #000;
   font-weight: 500;
   margin: 0;
   flex: 1;
@@ -543,6 +528,7 @@ body {
   align-items: center;
   justify-content: center;
   background: white;
+  border: 1px solid #000;
   border-radius: 4px;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -556,7 +542,7 @@ body {
 }
 
 .orders-compact h5 {
-  color: #1a1a1a;
+  color: #000;
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
   font-weight: 500;
@@ -569,7 +555,8 @@ body {
 }
 
 .order-compact {
-  background: #faf9f7;
+  background: white;
+  border: 2px solid #000;
   border-radius: 8px;
   padding: 0.5rem 0.75rem;
   display: flex;
@@ -581,13 +568,13 @@ body {
 
 .order-compact .item-name {
   font-weight: 500;
-  color: #1a1a1a;
+  color: #000;
   font-size: 0.95rem;
 }
 
 .order-compact .item-price {
   font-weight: 600;
-  color: #c9a96e;
+  color: #000;
   font-size: 0.9rem;
 }
 
@@ -611,26 +598,26 @@ body {
 
 /* AI Insights Styling */
 .ai-insights {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: white;
+  border: 2px solid #000;
   border-radius: 12px;
   padding: 1.25rem;
   margin-top: 1rem;
-  border-left: 4px solid #c9a96e;
 }
 
 .insight-summary {
   background: white;
   padding: 1rem;
+  border: 1px solid #000;
   border-radius: 8px;
   margin-bottom: 1rem;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #2c3e50;
-  border-left: 3px solid #3498db;
+  color: #000;
 }
 
 .insight-summary strong {
-  color: #1a1a1a;
+  color: #000;
   font-weight: 600;
 }
 
@@ -643,14 +630,14 @@ body {
 .insight-item {
   background: white;
   padding: 0.875rem;
+  border: 2px solid #000;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .insight-label {
   display: block;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #000;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   text-transform: uppercase;
