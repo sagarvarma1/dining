@@ -1,131 +1,202 @@
-# Fine Dining Dataset Enhancement Script
+# Restaurant Chef Dashboard & Data Processing System
 
-This script analyzes customer data from a fine dining restaurant dataset and generates AI-powered insights for each reservation using OpenAI's gpt-4.1-mini-2025-04-14 model.
+A comprehensive restaurant management system that combines AI-powered customer data analysis with an intuitive chef dashboard interface. This project helps restaurant staff understand customer preferences, manage special accommodations, and prioritize kitchen operations based on guest needs.
 
-## Features
+## 🎯 Project Overview
 
-The script generates **conservative insights** including:
-- **Customer Values**: What customers value based on their reviews (e.g., "conversation", "personalized service", "authentic experience")
-- **New vs. Returning Customer**: Analysis based on email tone and references to "returning"
-- **Special Accommodations**: Birthday celebrations, wheelchair access, quiet tables, etc.
-- **Taste Preferences**: Specific taste profile - "sweet", "spicy", "savory", "rich", or "light" (only if clearly evident)
-- **Staff Interaction Preferences**: What customers like about staff - "chatty", "professional", "knowledgeable", "friendly", "enthusiastic", "attentive"
-- **Personal Interests**: Things customers mention enjoying - "art", "science", "desserts", "wine", "sports", "travel", "music", "local culture", etc.
+This system consists of two main components:
 
-**Important**: This script uses a **conservative approach** - it only includes insights when there is clear evidence in the customer data. Empty fields mean the data wasn't conclusive enough to make a confident determination.
+1. **Python Data Processing Engine**: Uses OpenAI's GPT models to analyze customer reviews and emails, extracting insights about preferences, special accommodations, and dining patterns
+2. **React Chef Dashboard**: An interactive web interface that helps kitchen staff manage reservations, track special dietary requirements, and prioritize table service based on customer needs
 
-## Setup
+## ✨ Key Features
 
-### 1. Install Dependencies
+### 📊 AI-Powered Customer Analysis
+- **Customer Values Detection**: Identifies what customers value most (service quality, ambiance, etc.)
+- **Special Accommodations Tracking**: Wheelchair access, birthday celebrations, allergies, etc.
+- **Dietary Restrictions Management**: Comprehensive tracking of gluten-free, nut-free, shellfish-free requirements
+- **Taste Profile Analysis**: Preference detection for sweet, spicy, savory, rich, or light flavors
+- **Staff Interaction Preferences**: Understanding how customers prefer to interact with staff
 
+### 🍽️ Chef Dashboard Interface
+- **Multiple View Modes**:
+  - **Different Days View**: Overview of reservations across different dates
+  - **Same Day View**: Detailed view of today's reservations with priority sorting
+  - **Chef View**: Kitchen-focused interface with Tables and Dishes modes
+
+- **Smart Prioritization**: Automatically sorts reservations by complexity (special needs first)
+- **Search & Filter**: Quick search by table number, customer name, or dish
+- **Table Management**: Add/remove tables with real-time updates
+- **Dish Organization**: View dishes by popularity and which tables ordered them
+
+### 🔍 Advanced Dashboard Features
+- **Real-time Search**: Filter reservations by table, customer, or menu items
+- **Priority Sorting**: Tables with special accommodations appear first
+- **Dietary Exception Tracking**: Clear visibility of all dietary restrictions
+- **Table Deletion**: Remove completed tables from active view
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- Python 3.8+
+- OpenAI API key
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sagarvarma1/dining.git
+   cd dining
+   ```
+
+2. **Install Python dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Install React dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Set up OpenAI API key**
+   ```bash
+   export OPENAI_API_KEY='your-openai-api-key-here'
+   ```
+
+### Usage
+
+#### Step 1: Process Customer Data
 ```bash
-pip install -r requirements.txt
-```
-
-### 2. Set OpenAI API Key
-
-You need an OpenAI API key to run this script. Set it as an environment variable:
-
-**Linux/Mac:**
-```bash
-export OPENAI_API_KEY='your-openai-api-key-here'
-```
-
-**Windows:**
-```cmd
-set OPENAI_API_KEY=your-openai-api-key-here
-```
-
-### 3. Ensure Data File is Present
-
-Make sure `src/fine-dining-dataset.json` exists in your project directory.
-
-## Usage
-
-**Test first (recommended):**
-```bash
+# Test the processing (recommended first)
 python test_script.py
+
+# Process the full dataset
+python generate_insights.py
+
+# Extract dishes for chef dashboard
+python extract_dishes.py
 ```
 
-**Run the full processing:**
+#### Step 2: Launch the Dashboard
 ```bash
+npm start
+```
+
+The dashboard will open at `http://localhost:3000`
+
+## 📁 Project Structure
+
+```
+restaurant-chef-dashboard/
+├── src/                          # React frontend source
+│   ├── App.js                   # Main dashboard component
+│   ├── App.css                  # Dashboard styling
+│   ├── index.js                 # React entry point
+│   ├── index.css                # Global styles
+│   └── fine-dining-dataset.json # Sample customer data
+├── public/                       # Public assets
+├── extract_dishes.py           # Dish extraction script
+├── generate_insights.py        # Customer analysis script
+├── add_justifications.py       # Data enhancement script
+├── test_script.py             # Testing utilities
+├── requirements.txt           # Python dependencies
+├── package.json              # Node.js dependencies
+└── README.md                 # This file
+```
+
+## 🎨 Dashboard Views
+
+### Same Day View
+- **Priority-based sorting**: Tables with special accommodations appear first
+- **Customer insights**: View dietary restrictions and preferences at a glance
+- **Table management**: Easy addition and removal of completed orders
+
+### Chef View - Tables Mode
+- **Table-centric organization**: See all dishes and exceptions per table
+- **Special accommodations**: Wheelchair access, allergies, celebrations highlighted
+- **Search functionality**: Quick filtering by table number or customer name
+
+### Chef View - Dishes Mode
+- **Dish popularity tracking**: See which items are ordered most
+- **Table assignments**: Know which tables ordered specific dishes
+- **Dietary variations**: Track gluten-free, nut-free modifications per dish
+
+## 🤖 AI Analysis Features
+
+The system uses OpenAI's GPT models to analyze customer data with a **conservative approach**:
+
+### Customer Insights Generated:
+- **Customer Values**: Service quality, ambiance preferences, conversation importance
+- **New vs. Returning**: Customer classification based on email patterns
+- **Special Accommodations**: Birthday celebrations, accessibility needs, seating preferences
+- **Taste Preferences**: Sweet, spicy, savory, rich, or light flavor profiles
+- **Staff Interaction**: Preferred communication styles (chatty, professional, knowledgeable)
+- **Personal Interests**: Art, wine, sports, travel, music, local culture
+
+### Data Processing:
+- **Conservative Analysis**: Only confident insights are included
+- **Rate Limiting**: Respects OpenAI API limits with built-in delays
+- **Error Handling**: Robust fallback for API failures
+- **Cost Optimization**: Uses efficient model (gpt-4.1-mini) for budget-friendly processing
+
+## 💰 Cost Considerations
+
+- **OpenAI API costs**: ~$0.005-0.01 per customer analysis
+- **Sample dataset (50 customers)**: ~$0.25-0.50 total cost
+- **Production use**: Scales linearly with customer volume
+
+## 🛠️ Development
+
+### Running in Development Mode
+```bash
+# Start React development server
+npm start
+
+# Run Python scripts for data processing
 python generate_insights.py
 ```
 
-The script will:
-1. Read the original dataset from `src/fine-dining-dataset.json`
-2. Process each customer's reviews and emails with conservative analysis
-3. Generate AI insights for each reservation (only confident insights)
-4. Save the enhanced data to `detailed_info.json`
-
-## Output Format
-
-Each reservation in the output file will have a new `notes` field. **Only confident insights are included**:
-
-```json
-{
-  "date": "2024-05-20",
-  "number_of_people": 4,
-  "orders": [...],
-  "notes": {
-    "customer_insights": {
-      "customer_values": ["personalized service", "conversation"],
-      "is_new_customer": false,
-      "special_accommodations": ["birthday celebration"],
-      "taste_preferences": "sweet",
-      "staff_interaction_preferences": ["chatty", "knowledgeable"],
-      "personal_interests": ["art", "wine", "local culture"]
-    },
-    "generated_at": "2024-01-15T10:30:00.000000",
-    "summary": "Values: personalized service, conversation. Returning customer. Special needs: birthday celebration. Taste preference: sweet. Likes staff who are: chatty, knowledgeable. Personal interests: art, wine, local culture."
-  }
-}
+### Building for Production
+```bash
+npm run build
 ```
 
-**Note**: If no confident insights can be determined, fields will be omitted entirely. This is normal and expected with the conservative approach.
+## 🤝 Contributing
 
-## Conservative Analysis Approach
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-- **Taste Preferences**: Only returns specific values ("sweet", "spicy", "savory", "rich", "light") when clearly evident from reviews
-- **Staff Preferences**: Only includes when customers explicitly mention positive staff interactions
-- **Customer Values**: Only includes when clearly stated in reviews
-- **Special Accommodations**: Only when explicitly mentioned in emails or reviews
-- **Personal Interests**: Only includes interests explicitly mentioned in reviews (e.g., art exhibits, wine knowledge, sports teams, local attractions)
+## 📄 License
 
-## Processing Time
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The script includes rate limiting delays to respect OpenAI's API limits. Processing time depends on:
-- Number of customers in the dataset
-- API response times
-- Rate limiting delays (0.5 seconds between requests)
+## 🙏 Acknowledgments
 
-For the sample dataset with ~50 customers, expect 2-5 minutes of processing time.
+- OpenAI for providing the GPT models for customer analysis
+- React team for the excellent frontend framework
+- The restaurant industry for inspiring this solution
 
-## Error Handling
+## 🆘 Troubleshooting
 
-The script includes robust error handling:
-- Returns empty insights if API calls fail
-- JSON parsing error recovery
-- File reading/writing error handling
-- Rate limiting respect
+**Dashboard not loading?**
+- Ensure `npm install` completed successfully
+- Check that `src/fine-dining-dataset.json` exists
+- Verify Node.js version (v14+)
 
-## Cost Considerations
+**AI analysis not working?**
+- Confirm OpenAI API key is set correctly
+- Check internet connection for API calls
+- Verify `requirements.txt` packages are installed
 
-This script uses OpenAI's gpt-4.1-mini-2025-04-14 model, which incurs API costs. Each customer analysis costs approximately $0.005-0.01 USD. For a dataset of 50 customers, expect costs of ~$0.25-0.50 USD.
+**Missing dishes in chef view?**
+- Run `python extract_dishes.py` to generate dish data
+- Ensure the script completed without errors
+- Check that `dishes.json` was created
 
-## Troubleshooting
-
-**"OpenAI API key not found"**
-- Ensure you've set the OPENAI_API_KEY environment variable
-- Restart your terminal/command prompt after setting the variable
-
-**"fine-dining-dataset.json not found"**
-- Ensure the file exists in the `src/` directory
-- Check the file path and permissions
-
-**"No insights generated"**
-- This is normal with conservative analysis - it means the data wasn't conclusive enough
-- The AI only provides insights when it's confident based on clear evidence
-
-**API Rate Limiting Errors**
-- The script includes automatic delays, but if you encounter issues, you can increase the `time.sleep()` values in the code 
+For more specific issues, please check the console logs or create an issue on GitHub. 
