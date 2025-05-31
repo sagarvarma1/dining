@@ -287,8 +287,7 @@ function App() {
 
       <main className="main-content">
         <div className="reservations-summary">
-          <h3>Today's Reservations: {reservationsForDate.length} parties</h3>
-          <p>Total guests: {reservationsForDate.reduce((sum, res) => sum + res.number_of_people, 0)}</p>
+          <h3>Today's Reservations: {reservationsForDate.length} parties - {reservationsForDate.reduce((sum, res) => sum + res.number_of_people, 0)} guests</h3>
         </div>
 
         <div className="reservations-list">
