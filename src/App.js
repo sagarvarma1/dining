@@ -7,6 +7,8 @@ function App() {
   const [availableDates, setAvailableDates] = useState([]);
   const [reservationsForDate, setReservationsForDate] = useState([]);
   const [showCalendar, setShowCalendar] = useState(false);
+  const [showEmails, setShowEmails] = useState({});
+  const [showReviews, setShowReviews] = useState({});
 
   useEffect(() => {
     // Extract all unique reservation dates and sort them
@@ -197,6 +199,20 @@ function App() {
     );
   };
 
+  const toggleEmails = (index) => {
+    setShowEmails(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const toggleReviews = (index) => {
+    setShowReviews(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   if (showCalendar) {
     return <Calendar />;
   }
@@ -323,6 +339,55 @@ function App() {
                             </div>
                           </div>
                         )}
+                      </div>
+                    )}
+
+                    <div className="action-buttons">
+                      {reservation.guestData.emails && reservation.guestData.emails.length > 0 && (
+                        <button 
+                          className="action-button"
+                          onClick={() => toggleEmails(index)}
+                        >
+                          {showEmails[index] ? 'Hide Email' : 'Show Email'}
+                        </button>
+                      )}
+                      
+                      {reservation.guestData.reviews && reservation.guestData.reviews.length > 0 && (
+                        <button 
+                          className="action-button"
+                          onClick={() => toggleReviews(index)}
+                        >
+                          {showReviews[index] ? 'Hide Reviews' : 'Show Reviews'}
+                        </button>
+                      )}
+                    </div>
+
+                    {showEmails[index] && reservation.guestData.emails && (
+                      <div className="email-section">
+                        <h6>Recent Email:</h6>
+                        {reservation.guestData.emails.map((email, emailIdx) => (
+                          <div key={emailIdx} className="email-item">
+                            <div className="email-subject"><strong>Subject:</strong> {email.subject}</div>
+                            <div className="email-date"><strong>Date:</strong> {email.date}</div>
+                            <div className="email-content">{email.combined_thread}</div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {showReviews[index] && reservation.guestData.reviews && (
+                      <div className="reviews-section">
+                        <h6>Previous Reviews:</h6>
+                        {reservation.guestData.reviews.map((review, reviewIdx) => (
+                          <div key={reviewIdx} className="review-item">
+                            <div className="review-header">
+                              <strong>{review.restaurant_name}</strong>
+                              <span className="review-rating">★ {review.rating}/5</span>
+                            </div>
+                            <div className="review-date">{review.date}</div>
+                            <div className="review-content">{review.content}</div>
+                          </div>
+                        ))}
                       </div>
                     )}
                   </div>

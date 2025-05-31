@@ -608,7 +608,6 @@ body {
 .insight-summary {
   background: white;
   padding: 1rem;
-  border: 1px solid #000;
   border-radius: 8px;
   margin-bottom: 1rem;
   font-size: 0.95rem;
@@ -630,7 +629,6 @@ body {
 .insight-item {
   background: white;
   padding: 0.875rem;
-  border: 2px solid #000;
   border-radius: 8px;
 }
 
@@ -746,4 +744,110 @@ body {
   .insight-item {
     padding: 0.75rem;
   }
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #000;
+}
+
+.action-button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+}
+
+.action-button:hover {
+  background: #333;
+}
+
+/* Email and Reviews Sections */
+.email-section,
+.reviews-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.email-section h6,
+.reviews-section h6 {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.email-item {
+  background: white;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.email-subject,
+.email-date {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.email-content {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+.review-item {
+  background: white;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-header strong {
+  color: #000;
+  font-size: 0.95rem;
+}
+
+.review-rating {
+  background: #000;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.review-content {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #000;
 } 
