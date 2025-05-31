@@ -970,10 +970,20 @@ body {
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
 }
 
 .footer-link:hover {
   color: white;
+}
+
+.footer-link.active-view {
+  color: white;
+  text-decoration: underline;
 }
 
 .back-to-top {
@@ -1152,5 +1162,266 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+}
+
+/* Chef View Styles */
+.chef-toggles {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #000;
+}
+
+.toggle-button {
+  background: white;
+  color: #000;
+  border: 2px solid #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: #f0f0f0;
+}
+
+.toggle-button.active {
+  background: #000;
+  color: white;
+}
+
+/* Chef Groups View */
+.chef-groups-view {
+  margin-top: 2rem;
+}
+
+.groups-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.group-card {
+  background: white;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.group-card:hover {
+  transform: translateY(-2px);
+}
+
+.group-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #000;
+}
+
+.group-header h4 {
+  font-size: 1.3rem;
+  color: #000;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.group-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.customer-name {
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.total-cost {
+  background: #000;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.group-dishes {
+  margin-bottom: 1.5rem;
+}
+
+.group-dishes h5 {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.dishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dish-item {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dish-name {
+  font-weight: 600;
+  color: #000;
+  font-size: 0.95rem;
+}
+
+.dish-price {
+  color: #666;
+  font-weight: 500;
+}
+
+.dish-exceptions {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.exception-tag {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.group-accommodations {
+  margin-top: 1rem;
+}
+
+.group-accommodations h5 {
+  font-size: 0.95rem;
+  color: #000;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Chef Dishes View */
+.chef-dishes-view {
+  margin-top: 2rem;
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.dish-tile {
+  background: white;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.dish-tile:hover {
+  transform: translateY(-2px);
+}
+
+.dish-tile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+}
+
+.dish-tile-header h4 {
+  font-size: 1.1rem;
+  color: #000;
+  margin: 0;
+  font-weight: 600;
+}
+
+.tile-orders {
+  background: #000;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.dish-tables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.table-chip {
+  background: #f8f8f8;
+  border: 1px solid #000;
+  color: #000;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.chip-exceptions {
+  font-size: 0.7rem;
+  color: #e74c3c;
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+
+/* Responsive Chef View */
+@media (max-width: 768px) {
+  .chef-toggles {
+    margin-top: 1rem;
+  }
+  
+  .groups-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .group-card,
+  .dish-tile {
+    padding: 1rem;
+  }
+  
+  .group-meta {
+    gap: 0.5rem;
+  }
+  
+  .dish-tile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
 } 

@@ -1,0 +1,999 @@
+{
+  "parties": [
+    {
+      "party_id": 1,
+      "customer_name": "Emily Chen",
+      "date": "2024-05-20",
+      "table_number": 13,
+      "group_size": 4,
+      "total_cost": 77.0,
+      "special_accommodations": [
+        "gluten-free menu",
+        "table adjustment for additional guest"
+      ],
+      "dishes": [
+        {
+          "name": "Duck Confit",
+          "price": 45.0,
+          "dietary_exceptions": [
+            "gluten-free"
+          ]
+        },
+        {
+          "name": "Salmon Tartare",
+          "price": 32.0,
+          "dietary_exceptions": [
+            "nut-free"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 2,
+      "customer_name": "David Martinez",
+      "date": "2024-05-20",
+      "table_number": 20,
+      "group_size": 2,
+      "total_cost": 73.0,
+      "special_accommodations": [
+        "private dining area"
+      ],
+      "dishes": [
+        {
+          "name": "Beef Bourguignon",
+          "price": 55.0,
+          "dietary_exceptions": []
+        },
+        {
+          "name": "Chocolate Soufflé",
+          "price": 18.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 3,
+      "customer_name": "Karen Wu",
+      "date": "2024-12-10",
+      "table_number": 3,
+      "group_size": 2,
+      "total_cost": 48.0,
+      "special_accommodations": [
+        "wheelchair access",
+        "birthday celebration"
+      ],
+      "dishes": [
+        {
+          "name": "Coq au Vin",
+          "price": 48.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 4,
+      "customer_name": "Peter Glover",
+      "date": "2024-11-01",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 60.0,
+      "special_accommodations": [
+        "severe walnut allergy"
+      ],
+      "dishes": [
+        {
+          "name": "Boeuf Bourguignon",
+          "price": 60.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 5,
+      "customer_name": "Sylvia Brown",
+      "date": "2024-09-15",
+      "table_number": 6,
+      "group_size": 3,
+      "total_cost": 42.0,
+      "special_accommodations": [
+        "gluten-free"
+      ],
+      "dishes": [
+        {
+          "name": "Salmon en Papillote",
+          "price": 42.0,
+          "dietary_exceptions": [
+            "gluten-free"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 6,
+      "customer_name": "Alicia Martin",
+      "date": "2025-02-14",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 25.0,
+      "special_accommodations": [
+        "personalized note on dessert plate"
+      ],
+      "dishes": [
+        {
+          "name": "Escargots",
+          "price": 25.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 7,
+      "customer_name": "Benjamin Cruz",
+      "date": "2025-04-10",
+      "table_number": 6,
+      "group_size": 4,
+      "total_cost": 46.0,
+      "special_accommodations": [
+        "kid-friendly menu",
+        "smaller portions"
+      ],
+      "dishes": [
+        {
+          "name": "Duck Confit",
+          "price": 46.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 8,
+      "customer_name": "Chelsea Wright",
+      "date": "2025-03-05",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 58.0,
+      "special_accommodations": [
+        "anniversary cake",
+        "candle moment"
+      ],
+      "dishes": [
+        {
+          "name": "Beef Bourguignon",
+          "price": 58.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 9,
+      "customer_name": "Dylan Hayes",
+      "date": "2025-01-20",
+      "table_number": 6,
+      "group_size": 3,
+      "total_cost": 16.0,
+      "special_accommodations": [
+        "celebratory toast"
+      ],
+      "dishes": [
+        {
+          "name": "Crème Brûlée",
+          "price": 16.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 10,
+      "customer_name": "Eve Olsen",
+      "date": "2025-05-10",
+      "table_number": 6,
+      "group_size": 4,
+      "total_cost": 50.0,
+      "special_accommodations": [
+        "celebratory toast",
+        "non-alcoholic options",
+        "scenic spots for photos"
+      ],
+      "dishes": [
+        {
+          "name": "Foie Gras",
+          "price": 50.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 11,
+      "customer_name": "Felix Novak",
+      "date": "2025-01-02",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 30.0,
+      "special_accommodations": [
+        "dairy-free options"
+      ],
+      "dishes": [
+        {
+          "name": "Salmon Tartare",
+          "price": 30.0,
+          "dietary_exceptions": [
+            "dairy-free"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 12,
+      "customer_name": "Gina Parker",
+      "date": "2025-03-11",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 25.0,
+      "special_accommodations": [
+        "small rose on table"
+      ],
+      "dishes": [
+        {
+          "name": "Escargots",
+          "price": 25.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 13,
+      "customer_name": "Henry Cooper",
+      "date": "2024-08-01",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 62.0,
+      "special_accommodations": [
+        "quiet proposal",
+        "discreet service"
+      ],
+      "dishes": [
+        {
+          "name": "Rabbit Roulade",
+          "price": 62.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 14,
+      "customer_name": "Irene Roberts",
+      "date": "2024-12-02",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 54.0,
+      "special_accommodations": [
+        "birthday celebration with candle"
+      ],
+      "dishes": [
+        {
+          "name": "Foie Gras",
+          "price": 54.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 15,
+      "customer_name": "Jacob Perez",
+      "date": "2025-01-15",
+      "table_number": 7,
+      "group_size": 3,
+      "total_cost": 180.0,
+      "special_accommodations": [
+        "wheelchair access",
+        "less spicy palate"
+      ],
+      "dishes": [
+        {
+          "name": "Chef's Tasting Menu",
+          "price": 180.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 16,
+      "customer_name": "Julie Wilson",
+      "date": "2024-08-20",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 45.0,
+      "special_accommodations": [
+        "secluded corner table"
+      ],
+      "dishes": [
+        {
+          "name": "Lobster Bisque",
+          "price": 45.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 17,
+      "customer_name": "Kara Thompson",
+      "date": "2024-10-10",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 59.0,
+      "special_accommodations": [
+        "celebration topper on dessert"
+      ],
+      "dishes": [
+        {
+          "name": "Boeuf Bourguignon",
+          "price": 59.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 18,
+      "customer_name": "Lance Ramirez",
+      "date": "2024-11-15",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 26.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Escargots",
+          "price": 26.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 19,
+      "customer_name": "Maria Brooks",
+      "date": "2025-01-05",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 185.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Chef's Tasting Menu",
+          "price": 185.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 20,
+      "customer_name": "Noah Davis",
+      "date": "2024-08-18",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 45.0,
+      "special_accommodations": [
+        "quiet birthday celebration"
+      ],
+      "dishes": [
+        {
+          "name": "Duck Confit",
+          "price": 45.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 21,
+      "customer_name": "Olivia Morris",
+      "date": "2025-02-20",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 60.0,
+      "special_accommodations": [
+        "low-key engagement announcement"
+      ],
+      "dishes": [
+        {
+          "name": "Boeuf Bourguignon",
+          "price": 60.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 22,
+      "customer_name": "Paula Nelson",
+      "date": "2024-10-25",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 28.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Escargots",
+          "price": 28.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 23,
+      "customer_name": "Quinn Stevens",
+      "date": "2024-12-30",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 48.0,
+      "special_accommodations": [
+        "peanut allergy"
+      ],
+      "dishes": [
+        {
+          "name": "Lobster Bisque",
+          "price": 48.0,
+          "dietary_exceptions": [
+            "nut-free"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 24,
+      "customer_name": "Rosalind Tucker",
+      "date": "2025-01-25",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 42.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Salmon en Papillote",
+          "price": 42.0,
+          "dietary_exceptions": [
+            "gluten-free"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 25,
+      "customer_name": "Steven Upton",
+      "date": "2024-09-10",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 57.0,
+      "special_accommodations": [
+        "pre-order dessert"
+      ],
+      "dishes": [
+        {
+          "name": "Boeuf Bourguignon",
+          "price": 57.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 26,
+      "customer_name": "Tamara Valdez",
+      "date": "2025-02-14",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 190.0,
+      "special_accommodations": [
+        "shellfish allergy"
+      ],
+      "dishes": [
+        {
+          "name": "Chef's Tasting Menu",
+          "price": 190.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 27,
+      "customer_name": "Umar Watson",
+      "date": "2024-08-20",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 52.0,
+      "special_accommodations": [
+        "quiet table",
+        "discreet celebration",
+        "custom dessert note"
+      ],
+      "dishes": [
+        {
+          "name": "Foie Gras",
+          "price": 52.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 28,
+      "customer_name": "Valerie Xiu",
+      "date": "2025-01-03",
+      "table_number": 6,
+      "group_size": 4,
+      "total_cost": 25.0,
+      "special_accommodations": [
+        "birthday celebrations"
+      ],
+      "dishes": [
+        {
+          "name": "Salade Niçoise",
+          "price": 25.0,
+          "dietary_exceptions": [
+            "pescatarian"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 29,
+      "customer_name": "Wendy Young",
+      "date": "2024-10-05",
+      "table_number": 13,
+      "group_size": 6,
+      "total_cost": 44.0,
+      "special_accommodations": [
+        "group seating"
+      ],
+      "dishes": [
+        {
+          "name": "Coq au Vin",
+          "price": 44.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 30,
+      "customer_name": "Xander Zimmerman",
+      "date": "2024-09-20",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 60.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Rabbit Roulade",
+          "price": 60.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 31,
+      "customer_name": "Yara Richards",
+      "date": "2025-02-22",
+      "table_number": 20,
+      "group_size": 8,
+      "total_cost": 45.0,
+      "special_accommodations": [
+        "semi-private space"
+      ],
+      "dishes": [
+        {
+          "name": "Duck Confit",
+          "price": 45.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 32,
+      "customer_name": "Zoe Baxter",
+      "date": "2024-09-15",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 28.0,
+      "special_accommodations": [
+        "severe shellfish allergy"
+      ],
+      "dishes": [
+        {
+          "name": "Salade Niçoise",
+          "price": 28.0,
+          "dietary_exceptions": [
+            "shellfish-free"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 33,
+      "customer_name": "Alex Cunningham",
+      "date": "2024-10-01",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 56.0,
+      "special_accommodations": [
+        "birthday celebration"
+      ],
+      "dishes": [
+        {
+          "name": "Foie Gras",
+          "price": 56.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 34,
+      "customer_name": "Brianna Daniels",
+      "date": "2024-12-12",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 170.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Chef's Tasting Menu",
+          "price": 170.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 35,
+      "customer_name": "Carlos Edwards",
+      "date": "2025-01-18",
+      "table_number": 5,
+      "group_size": 2,
+      "total_cost": 55.0,
+      "special_accommodations": [
+        "seating near piano/live music"
+      ],
+      "dishes": [
+        {
+          "name": "Boeuf Bourguignon",
+          "price": 55.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 36,
+      "customer_name": "Diana Flores",
+      "date": "2024-09-10",
+      "table_number": 6,
+      "group_size": 4,
+      "total_cost": 26.0,
+      "special_accommodations": [
+        "child-friendly options"
+      ],
+      "dishes": [
+        {
+          "name": "Escargots",
+          "price": 26.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 37,
+      "customer_name": "Ethan Garcia",
+      "date": "2025-02-05",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 46.0,
+      "special_accommodations": [
+        "low-key birthday celebration",
+        "no singing"
+      ],
+      "dishes": [
+        {
+          "name": "Coq au Vin",
+          "price": 46.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 38,
+      "customer_name": "Fiona Hamilton",
+      "date": "2024-11-10",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 24.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Salade Niçoise",
+          "price": 24.0,
+          "dietary_exceptions": [
+            "pescatarian"
+          ]
+        }
+      ]
+    },
+    {
+      "party_id": 39,
+      "customer_name": "Gabriella Ingram",
+      "date": "2025-01-11",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 55.0,
+      "special_accommodations": [
+        "celebratory note or card"
+      ],
+      "dishes": [
+        {
+          "name": "Foie Gras",
+          "price": 55.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 40,
+      "customer_name": "Hank Johnson",
+      "date": "2024-12-20",
+      "table_number": 3,
+      "group_size": 2,
+      "total_cost": 64.0,
+      "special_accommodations": [
+        "table with enough aisle space"
+      ],
+      "dishes": [
+        {
+          "name": "Rabbit Roulade",
+          "price": 64.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 41,
+      "customer_name": "Iliana Kay",
+      "date": "2024-10-28",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 44.0,
+      "special_accommodations": [
+        "custom dessert message"
+      ],
+      "dishes": [
+        {
+          "name": "Lobster Bisque",
+          "price": 44.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 42,
+      "customer_name": "Jake Lee",
+      "date": "2025-02-25",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 26.0,
+      "special_accommodations": [
+        "small group celebration",
+        "note on dessert plate"
+      ],
+      "dishes": [
+        {
+          "name": "Salade Niçoise",
+          "price": 26.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 43,
+      "customer_name": "Laura Maxwell",
+      "date": "2024-09-05",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 47.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Coq au Vin",
+          "price": 47.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 44,
+      "customer_name": "Michelle Norton",
+      "date": "2025-01-12",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 55.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Foie Gras",
+          "price": 55.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 45,
+      "customer_name": "Nora Owens",
+      "date": "2024-09-25",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 22.0,
+      "special_accommodations": [
+        "no shellfish",
+        "no fish sauce"
+      ],
+      "dishes": [
+        {
+          "name": "Escargots",
+          "price": 22.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 46,
+      "customer_name": "Oscar Patel",
+      "date": "2025-03-18",
+      "table_number": 5,
+      "group_size": 2,
+      "total_cost": 195.0,
+      "special_accommodations": [
+        "live music performance"
+      ],
+      "dishes": [
+        {
+          "name": "Chef's Tasting Menu",
+          "price": 195.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 47,
+      "customer_name": "Penelope Quinn",
+      "date": "2024-12-08",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 42.0,
+      "special_accommodations": [
+        "meal timing for pre-theater"
+      ],
+      "dishes": [
+        {
+          "name": "Lobster Bisque",
+          "price": 42.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 48,
+      "customer_name": "Ronald Rogers",
+      "date": "2025-01-28",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 58.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Boeuf Bourguignon",
+          "price": 58.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 49,
+      "customer_name": "Sophie Sullivan",
+      "date": "2024-10-02",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 185.0,
+      "special_accommodations": [
+        "no cilantro"
+      ],
+      "dishes": [
+        {
+          "name": "Chef's Tasting Menu",
+          "price": 185.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 50,
+      "customer_name": "Thomas Vickers",
+      "date": "2024-12-20",
+      "table_number": 2,
+      "group_size": 2,
+      "total_cost": 16.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Crème Brûlée",
+          "price": 16.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 51,
+      "customer_name": "Ursula Wood",
+      "date": "2025-02-10",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 34.0,
+      "special_accommodations": [
+        "low-sodium diet"
+      ],
+      "dishes": [
+        {
+          "name": "Salmon Tartare",
+          "price": 34.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 52,
+      "customer_name": "Victor Xu",
+      "date": "2025-03-10",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 46.0,
+      "special_accommodations": [
+        "gift presentation with dessert"
+      ],
+      "dishes": [
+        {
+          "name": "Duck Confit",
+          "price": 46.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 53,
+      "customer_name": "Winnie Yee",
+      "date": "2024-10-15",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 59.0,
+      "special_accommodations": [],
+      "dishes": [
+        {
+          "name": "Boeuf Bourguignon",
+          "price": 59.0,
+          "dietary_exceptions": []
+        }
+      ]
+    },
+    {
+      "party_id": 54,
+      "customer_name": "Ximena Zhao",
+      "date": "2024-12-28",
+      "table_number": 1,
+      "group_size": 2,
+      "total_cost": 175.0,
+      "special_accommodations": [
+        "lactose intolerance"
+      ],
+      "dishes": [
+        {
+          "name": "Chef's Tasting Menu",
+          "price": 175.0,
+          "dietary_exceptions": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "generated_at": "2025-05-30T18:04:47.861948",
+    "total_parties": 54,
+    "total_revenue": 3385.0,
+    "source_file": "src/detailed_info.json"
+  }
+}

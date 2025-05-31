@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import detailedData from './detailed_info.json';
+import dishesData from './dishes.json';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   const [showReviews, setShowReviews] = useState({});
   const [currentView, setCurrentView] = useState('different'); // 'different', 'same', 'chef'
   const [expandedCards, setExpandedCards] = useState({});
+  const [chefViewType, setChefViewType] = useState('groups'); // 'groups' or 'dishes'
 
   useEffect(() => {
     // Extract all unique reservation dates and sort them
@@ -54,22 +56,33 @@ function App() {
   const calculatePriority = (reservation, guestData) => {
     let score = 0;
     
-    // Party size scoring (more guests = higher priority)
-    score += reservation.number_of_people * 10;
+    // Order cost scoring (higher cost = higher priority)
+    const totalOrderCost = reservation.orders.reduce((sum, order) => sum + order.price, 0);
+    score += totalOrderCost * 2; // 2 points per dollar
     
-    // Special accommodations scoring
+    // Special accommodations scoring (high weight for needs)
     if (reservation.notes?.customer_insights?.special_accommodations) {
-      score += reservation.notes.customer_insights.special_accommodations.length * 20;
+      score += reservation.notes.customer_insights.special_accommodations.length * 50;
     }
     
-    // Dietary restrictions scoring
+    // Dietary restrictions scoring (high weight for needs)
     const dietaryTags = reservation.orders.reduce((acc, order) => acc + order.dietary_tags.length, 0);
-    score += dietaryTags * 15;
+    score += dietaryTags * 30;
     
-    // Email complexity (longer emails might indicate more special requests)
+    // Email complexity (longer emails indicate more special requests)
     if (guestData.emails && guestData.emails.length > 0) {
       const avgEmailLength = guestData.emails.reduce((acc, email) => acc + email.combined_thread.length, 0) / guestData.emails.length;
-      if (avgEmailLength > 200) score += 10;
+      if (avgEmailLength > 200) score += 25;
+      if (avgEmailLength > 400) score += 25; // Extra points for very long emails
+    }
+    
+    // Additional customer values that indicate high maintenance
+    if (reservation.notes?.customer_insights?.customer_values) {
+      const highMaintenanceValues = ['personalized service', 'confidential atmosphere', 'enthusiastic staff'];
+      const matches = reservation.notes.customer_insights.customer_values.filter(value => 
+        highMaintenanceValues.some(hmv => value.toLowerCase().includes(hmv.toLowerCase()))
+      );
+      score += matches.length * 15;
     }
     
     return score;
@@ -320,10 +333,58 @@ function App() {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Chef View Functions
+  const getGroupsData = () => {
+    return dishesData.parties.sort((a, b) => a.table_number - b.table_number);
+  };
+
+  const getDishesData = () => {
+    const dishesMap = new Map();
+    
+    dishesData.parties.forEach(party => {
+      party.dishes.forEach(dish => {
+        const dishKey = dish.name;
+        if (!dishesMap.has(dishKey)) {
+          dishesMap.set(dishKey, {
+            name: dish.name,
+            variations: []
+          });
+        }
+        
+        // Create variation key based on dietary exceptions
+        const variationKey = dish.dietary_exceptions.length > 0 ? 
+          dish.dietary_exceptions.sort().join(', ') : 'standard';
+        
+        const existingVariation = dishesMap.get(dishKey).variations.find(v => v.variation === variationKey);
+        
+        if (existingVariation) {
+          existingVariation.orders.push({
+            party_id: party.party_id,
+            table_number: party.table_number,
+            customer_name: party.customer_name,
+            price: dish.price
+          });
+          existingVariation.quantity += 1;
+        } else {
+          dishesMap.get(dishKey).variations.push({
+            variation: variationKey,
+            dietary_exceptions: dish.dietary_exceptions,
+            quantity: 1,
+            orders: [{
+              party_id: party.party_id,
+              table_number: party.table_number,
+              customer_name: party.customer_name,
+              price: dish.price
+            }]
+          });
+        }
+      });
     });
+    
+    return Array.from(dishesMap.values()).sort((a, b) => a.name.localeCompare(b.name));
   };
 
   if (showCalendar) {
@@ -521,8 +582,155 @@ function App() {
             </div>
             <div className="footer-right">
               <button onClick={() => setCurrentView('different')} className="footer-link">Different Days View</button>
-              <span className="footer-link active-view" style={{textDecoration: 'underline'}}>Same Days View</span>
+              <span className="footer-link active-view">Same Days View</span>
               <button onClick={() => setCurrentView('chef')} className="footer-link">Chef View</button>
+              <button onClick={scrollToTop} className="back-to-top">
+                Back to top
+              </button>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>© French Laudure 2024. All Rights Reserved</p>
+          </div>
+        </footer>
+      </div>
+    );
+  }
+
+  // Render Chef View
+  if (currentView === 'chef') {
+    const groupsData = getGroupsData();
+    const dishesDataProcessed = getDishesData();
+    
+    return (
+      <div className="app">
+        <header className="header">
+          <h1>French Laudure</h1>
+          <div className="date-navigation">
+            <div className="current-date">
+              <h2>Chef View - Kitchen Dashboard</h2>
+            </div>
+          </div>
+        </header>
+
+        <main className="main-content">
+          <div className="chef-toggles">
+            <button 
+              className={`toggle-button ${chefViewType === 'groups' ? 'active' : ''}`}
+              onClick={() => setChefViewType('groups')}
+            >
+              Groups
+            </button>
+            <button 
+              className={`toggle-button ${chefViewType === 'dishes' ? 'active' : ''}`}
+              onClick={() => setChefViewType('dishes')}
+            >
+              Dishes
+            </button>
+          </div>
+
+          {chefViewType === 'groups' ? (
+            <div className="chef-groups-view">
+              <div className="reservations-summary">
+                <h3>All Tables: {groupsData.length} tables</h3>
+              </div>
+              
+              <div className="groups-list">
+                {groupsData.map((party) => (
+                  <div key={party.party_id} className="group-card">
+                    <div className="group-header">
+                      <h4>Table {party.party_id}</h4>
+                      <div className="group-meta">
+                        <span className="customer-name">{party.customer_name}</span>
+                        <span className="party-size">{party.group_size} guests</span>
+                        <span className="total-cost">${party.total_cost}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="group-dishes">
+                      <h5>Dishes & Exceptions:</h5>
+                      <div className="dishes-list">
+                        {party.dishes.map((dish, dishIdx) => (
+                          <div key={dishIdx} className="dish-item">
+                            <span className="dish-name">{dish.name}</span>
+                            <span className="dish-price">${dish.price}</span>
+                            {dish.dietary_exceptions.length > 0 && (
+                              <div className="dish-exceptions">
+                                {dish.dietary_exceptions.map((exception, excIdx) => (
+                                  <span key={excIdx} className="exception-tag">
+                                    {exception}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {party.special_accommodations.length > 0 && (
+                      <div className="group-accommodations">
+                        <h5>Special Accommodations:</h5>
+                        <div className="accommodation-chips">
+                          {party.special_accommodations.map((acc, accIdx) => (
+                            <span key={accIdx} className="accommodation-chip">
+                              {acc}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="chef-dishes-view">
+              <div className="reservations-summary">
+                <h3>All Dishes: {dishesDataProcessed.length} unique dishes</h3>
+              </div>
+              
+              <div className="dishes-grid">
+                {dishesDataProcessed.map((dish) => (
+                  <div key={dish.name} className="dish-tile">
+                    <div className="dish-tile-header">
+                      <h4>{dish.name}</h4>
+                      <span className="tile-orders">
+                        {dish.variations.reduce((sum, v) => sum + v.quantity, 0)}
+                      </span>
+                    </div>
+                    
+                    <div className="dish-tables">
+                      {dish.variations.map((variation, varIdx) => 
+                        variation.orders.map((order, orderIdx) => (
+                          <span key={`${varIdx}-${orderIdx}`} className="table-chip">
+                            Table {order.party_id}
+                            {variation.dietary_exceptions.length > 0 && (
+                              <span className="chip-exceptions">
+                                ({variation.dietary_exceptions.join(', ')})
+                              </span>
+                            )}
+                          </span>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </main>
+
+        <footer className="footer">
+          <div className="footer-content">
+            <div className="footer-left">
+              <a href="#" className="footer-link">Terms & policies</a>
+              <a href="#" className="footer-link">Privacy policy</a>
+            </div>
+            <div className="footer-right">
+              <button onClick={() => setCurrentView('different')} className="footer-link">Different Days View</button>
+              <button onClick={() => setCurrentView('same')} className="footer-link">Same Days View</button>
+              <span className="footer-link active-view">Chef View</span>
               <button onClick={scrollToTop} className="back-to-top">
                 Back to top
               </button>
@@ -729,7 +937,7 @@ function App() {
             <a href="#" className="footer-link">Privacy policy</a>
           </div>
           <div className="footer-right">
-            <span className="footer-link active-view" style={{textDecoration: 'underline'}}>Different Days View</span>
+            <span className="footer-link active-view">Different Days View</span>
             <button onClick={() => setCurrentView('same')} className="footer-link">Same Days View</button>
             <button onClick={() => setCurrentView('chef')} className="footer-link">Chef View</button>
             <button onClick={scrollToTop} className="back-to-top">
