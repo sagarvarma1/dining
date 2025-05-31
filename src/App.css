@@ -159,8 +159,8 @@ body {
 }
 
 .legend-color.has-reservation {
-  background: #000;
-  border-color: #000;
+  background: #ffd700;
+  border-color: #ffd700;
 }
 
 .legend-color.selected {
@@ -246,14 +246,14 @@ body {
 }
 
 .calendar-day.has-reservation {
-  background: #000;
-  color: white;
+  background: #ffd700;
+  color: #000;
   cursor: pointer;
   font-weight: 600;
 }
 
 .calendar-day.has-reservation:hover {
-  background: #333;
+  background: #ffed4e;
 }
 
 .calendar-day.selected {
@@ -263,8 +263,8 @@ body {
 }
 
 .calendar-day.selected.has-reservation {
-  background: #000;
-  border: 3px solid #000;
+  background: #ffd700;
+  border: 3px solid #b8860b;
 }
 
 .main-content {
@@ -294,9 +294,9 @@ body {
 }
 
 .reservations-list {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .no-reservations {
@@ -320,6 +320,9 @@ body {
   border-radius: 12px;
   padding: 1.5rem;
   transition: transform 0.2s ease;
+  flex: 1 1 400px;
+  max-width: calc(50% - 0.75rem);
+  align-self: flex-start;
 }
 
 .reservation-card:hover {
@@ -420,7 +423,12 @@ body {
   }
   
   .reservations-list {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .reservation-card {
+    max-width: none;
+    flex: 1 1 auto;
   }
   
   .order-item {
