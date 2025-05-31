@@ -213,6 +213,57 @@ function App() {
     }));
   };
 
+  const renderInsightTags = (items, className, justifications = {}) => {
+    if (!items || (Array.isArray(items) && items.length === 0)) return null;
+    
+    const itemsArray = Array.isArray(items) ? items : [items];
+    return itemsArray.map((item, index) => {
+      const justification = justifications[item];
+      
+      if (justification) {
+        return (
+          <div key={index} className="tooltip-container">
+            <span className={`${className} has-tooltip`}>
+              {item}
+            </span>
+            <div className="tooltip">
+              {justification}
+            </div>
+          </div>
+        );
+      }
+      
+      return (
+        <span key={index} className={className}>
+          {item}
+        </span>
+      );
+    });
+  };
+
+  const renderInsightBadge = (value, className, justification = null) => {
+    if (!value) return null;
+    
+    if (justification) {
+      return (
+        <div className="tooltip-container">
+          <span className={`insight-badge ${className} has-tooltip`}>
+            {typeof value === 'boolean' ? (value ? 'New Customer' : 'Returning Customer') : value}
+          </span>
+          <div className="tooltip">
+            {justification}
+          </div>
+        </div>
+      );
+    }
+    
+    return (
+      <span className={`insight-badge ${className}`}>
+        {typeof value === 'boolean' ? (value ? 'New Customer' : 'Returning Customer') : value}
+      </span>
+    );
+  };
+
   if (showCalendar) {
     return <Calendar />;
   }
@@ -278,64 +329,70 @@ function App() {
                   <div className="ai-insights">
                     {reservation.notes.customer_insights && (
                       <div className="insights-grid">
+                        {/* Customer Values */}
                         {reservation.notes.customer_insights.customer_values && (
                           <div className="insight-item">
-                            <span className="insight-label">Values:</span>
+                            <span className="insight-label">Values</span>
                             <div className="insight-tags">
-                              {reservation.notes.customer_insights.customer_values.map((value, idx) => (
-                                <span key={idx} className="insight-tag values">{value}</span>
-                              ))}
+                              {renderInsightTags(reservation.notes.customer_insights.customer_values, 'insight-tag values', reservation.notes.customer_insights.customer_values_justifications)}
                             </div>
                           </div>
                         )}
 
+                        {/* New/Returning Customer */}
                         {reservation.notes.customer_insights.hasOwnProperty('is_new_customer') && (
                           <div className="insight-item">
-                            <span className="insight-label">Customer Type:</span>
-                            <span className={`insight-badge ${reservation.notes.customer_insights.is_new_customer ? 'new' : 'returning'}`}>
-                              {reservation.notes.customer_insights.is_new_customer ? 'New Customer' : 'Returning Customer'}
-                            </span>
+                            <span className="insight-label">Customer Type</span>
+                            <div className="insight-tags">
+                              {renderInsightBadge(
+                                reservation.notes.customer_insights.is_new_customer, 
+                                reservation.notes.customer_insights.is_new_customer ? 'new' : 'returning',
+                                reservation.notes.customer_insights.is_new_customer_justification
+                              )}
+                            </div>
                           </div>
                         )}
 
+                        {/* Special Accommodations */}
                         {reservation.notes.customer_insights.special_accommodations && (
                           <div className="insight-item">
-                            <span className="insight-label">Special Needs:</span>
+                            <span className="insight-label">Accommodations</span>
                             <div className="insight-tags">
-                              {reservation.notes.customer_insights.special_accommodations.map((accommodation, idx) => (
-                                <span key={idx} className="insight-tag accommodations">{accommodation}</span>
-                              ))}
+                              {renderInsightTags(reservation.notes.customer_insights.special_accommodations, 'insight-tag accommodations', reservation.notes.customer_insights.special_accommodations_justifications)}
                             </div>
                           </div>
                         )}
 
-                        {reservation.notes.customer_insights.taste_preferences && (
-                          <div className="insight-item">
-                            <span className="insight-label">Taste:</span>
-                            <span className={`insight-badge taste-${reservation.notes.customer_insights.taste_preferences}`}>
-                              {reservation.notes.customer_insights.taste_preferences}
-                            </span>
-                          </div>
-                        )}
-
+                        {/* Staff Interaction Preferences */}
                         {reservation.notes.customer_insights.staff_interaction_preferences && (
                           <div className="insight-item">
-                            <span className="insight-label">Staff Style:</span>
+                            <span className="insight-label">Staff Preferences</span>
                             <div className="insight-tags">
-                              {reservation.notes.customer_insights.staff_interaction_preferences.map((pref, idx) => (
-                                <span key={idx} className="insight-tag staff">{pref}</span>
-                              ))}
+                              {renderInsightTags(reservation.notes.customer_insights.staff_interaction_preferences, 'insight-tag staff', reservation.notes.customer_insights.staff_interaction_preferences_justifications)}
                             </div>
                           </div>
                         )}
 
+                        {/* Taste Preferences */}
+                        {reservation.notes.customer_insights.taste_preferences && (
+                          <div className="insight-item">
+                            <span className="insight-label">Taste Profile</span>
+                            <div className="insight-tags">
+                              {renderInsightBadge(
+                                reservation.notes.customer_insights.taste_preferences, 
+                                `taste-${reservation.notes.customer_insights.taste_preferences}`,
+                                reservation.notes.customer_insights.taste_preferences_justification
+                              )}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Personal Interests */}
                         {reservation.notes.customer_insights.personal_interests && (
                           <div className="insight-item">
-                            <span className="insight-label">Interests:</span>
+                            <span className="insight-label">Interests</span>
                             <div className="insight-tags">
-                              {reservation.notes.customer_insights.personal_interests.map((interest, idx) => (
-                                <span key={idx} className="insight-tag interests">{interest}</span>
-                              ))}
+                              {renderInsightTags(reservation.notes.customer_insights.personal_interests, 'insight-tag interests', reservation.notes.customer_insights.personal_interests_justifications)}
                             </div>
                           </div>
                         )}

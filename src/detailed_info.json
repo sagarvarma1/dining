@@ -56,7 +56,25 @@
               "personal_interests": [
                 "art",
                 "desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "gluten-free options": "The customer specifically requested gluten-free options in their email and praised French Laudure for accommodating their dietary needs in their review.",
+                "personalized service": "The customer highlighted the personalized gluten-free menu at French Laudure and the chef's attentiveness to dietary restrictions at Sushi Blossom, emphasizing the value of personalized service.",
+                "enthusiastic staff": "The customer highlighted the staff's enthusiastic conversation about a local art exhibit, enhancing the personal experience at French Laudure."
+              },
+              "special_accommodations_justifications": {
+                "gluten-free menu": "The customer specifically requested details about gluten-free options in their email and praised the gluten-free tasting menu in their review of French Laudure.",
+                "table adjustment for additional guest": "The customer's email requesting a table adjustment for an additional guest and their interest in gluten-free options indicate a need for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "enthusiastic": "The customer highlighted the staff's enthusiastic engagement about a local art exhibit at French Laudure, indicating a preference for personal and lively interactions.",
+                "polite": "The customer highlighted the staff's enthusiastic engagement about local art and the chef's polite inquiry about dietary restrictions, indicating a preference for polite interactions."
+              },
+              "taste_preferences_justification": "The customer highlighted their enjoyment of a gluten-free dessert trolley at French Laudure, indicating a preference for sweet options.",
+              "personal_interests_justifications": {
+                "art": "The customer's mention of the staff discussing a local art exhibit at French Laudure highlights their interest in art, justifying the insight on personal interests.",
+                "desserts": "The customer's enthusiasm for the dessert trolley at French Laudure and their inquiry about gluten-free options indicate a strong interest in personalized dessert experiences."
+              }
             },
             "generated_at": "2025-05-30T16:40:07.517327",
             "summary": "Values: gluten-free options, personalized service, enthusiastic staff. Returning customer. Special needs: gluten-free menu, table adjustment for additional guest. Taste preference: sweet. Likes staff who are: enthusiastic, polite. Personal interests: art, desserts"
@@ -122,7 +140,24 @@
               "personal_interests": [
                 "football",
                 "cocktails"
-              ]
+              ],
+              "customer_values_justifications": {
+                "flawless pairings": "The customer highlighted the \"flawless\" wine pairings by the sommelier at French Laudure, indicating a strong appreciation for exceptional dining experiences.",
+                "friendly service": "The customer highlighted the friendly interactions with both the waiter at French Laudure and the server at Steak & Stein, emphasizing the importance of friendly service.",
+                "confidential atmosphere": "The customer's inquiry about using the private dining area for a VIP client highlights their value for a confidential atmosphere during dining experiences."
+              },
+              "special_accommodations_justifications": {
+                "private dining area": "The customer’s email inquiry about reserving the private dining area at French Laudure for a VIP client indicates a need for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The customer highlighted the friendly interactions with both the waiter at French Laudure and the server at Steak & Stein, indicating a preference for personable staff.",
+                "down-to-earth": "The customer appreciated the friendly and approachable nature of the staff at French Laudure, highlighting their engaging conversation about football with the waiter."
+              },
+              "taste_preferences_justification": "The customer’s preference for savory flavors is indicated by their enjoyment of the perfectly aged ribeye at Steak & Stein and the truffle course at French Laudure.",
+              "personal_interests_justifications": {
+                "football": "The customer mentioned discussing football with the waiter at French Laudure, indicating a personal interest in the sport.",
+                "cocktails": "The customer mentioned great cocktail recommendations from the server at Steak & Stein, indicating an interest in cocktails for future dining experiences."
+              }
             },
             "generated_at": "2025-05-30T16:40:09.647269",
             "summary": "Values: flawless pairings, friendly service, confidential atmosphere. Returning customer. Special needs: private dining area. Taste preference: savory. Likes staff who are: friendly, down-to-earth. Personal interests: football, cocktails"
@@ -183,7 +218,24 @@
               "personal_interests": [
                 "baseball",
                 "fruity desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "thoughtful staff": "The customer highlighted the thoughtful interaction with the waiter at French Laudure, indicating the importance of attentive service in their dining experience.",
+                "generous portions": "The customer highlighted \"generous portion sizes\" in their review of Rolling Noodles, indicating that this aspect is valued.",
+                "beautiful décor": "The customer praised the \"beautiful décor\" at French Laudure, highlighting its significance in their dining experience."
+              },
+              "special_accommodations_justifications": {
+                "wheelchair access": "The customer email specifically requests wheelchair access for their mother, indicating the need for special accommodations.",
+                "birthday celebration": "The customer email specifically requests wheelchair access and a surprise for a 70th birthday celebration, indicating the need for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The positive mention of thoughtful staff interactions and a lighthearted conversation in the French Laudure review indicates a preference for friendly staff engagement."
+              },
+              "taste_preferences_justification": "The customer's request for a fruity dessert surprise for their mother's birthday indicates a preference for sweet flavors.",
+              "personal_interests_justifications": {
+                "baseball": "The customer's mention of being Yankees fans in their review indicates a personal interest in baseball.",
+                "fruity desserts": "The customer's email specifically requested a surprise involving fruity desserts for their mother's 70th birthday, highlighting their interest in this type of dessert."
+              }
             },
             "generated_at": "2025-05-30T16:40:11.804534",
             "summary": "Values: thoughtful staff, generous portions, beautiful décor. Returning customer. Special needs: wheelchair access, birthday celebration. Taste preference: sweet. Likes staff who are: friendly. Personal interests: baseball, fruity desserts"
@@ -241,7 +293,21 @@
               "personal_interests": [
                 "local culture",
                 "museums"
-              ]
+              ],
+              "customer_values_justifications": {
+                "allergy safety": "The customer emphasized their severe walnut allergy in both a review praising French Laudure's careful handling and an email reminder for their upcoming visit.",
+                "local recommendations": "The customer highlighted the excellent handling of their walnut allergy at French Laudure and appreciated the local museum recommendations from the waiter."
+              },
+              "special_accommodations_justifications": {
+                "severe walnut allergy": "The customer explicitly mentioned their severe walnut allergy in both their review of French Laudure and their email reminder, highlighting the need for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "attentive": "The customer highlighted French Laudure's careful handling of their severe walnut allergy and expressed appreciation for the attentive service in their review and email."
+              },
+              "personal_interests_justifications": {
+                "local culture": "The customer’s positive experience at French Laudure, including the waiter’s local museum recommendations, highlights their interest in local culture.",
+                "museums": "The customer mentioned receiving fantastic local museum recommendations from the waiter at French Laudure, indicating an interest in museums."
+              }
             },
             "generated_at": "2025-05-30T16:40:14.643224",
             "summary": "Values: allergy safety, local recommendations. Returning customer. Special needs: severe walnut allergy. Likes staff who are: attentive. Personal interests: local culture, museums"
@@ -302,7 +368,22 @@
               "personal_interests": [
                 "desserts",
                 "celebrations"
-              ]
+              ],
+              "customer_values_justifications": {
+                "feedback": "The customer values feedback and personalized recommendations, as indicated by their review mentioning direct feedback to the team and their request for dessert options in the email.",
+                "comfort": "The customer appreciates comforting dishes, as indicated by their positive remarks about Blossom Vegan Kitchen's comforting yet elegant plant-based offerings.",
+                "elegance": "The customer praised Blossom Vegan Kitchen for its \"comforting and elegant\" dishes, highlighting their appreciation for elegance in dining experiences."
+              },
+              "special_accommodations_justifications": {
+                "gluten-free": "The customer explicitly mentioned being gluten-free in their email while requesting recommendations for a celebratory dessert."
+              },
+              "staff_interaction_preferences_justifications": {
+                "gracious": "The customer appreciated the gracious team at French Laudure who actively sought their feedback, highlighting the importance of positive staff interactions."
+              },
+              "personal_interests_justifications": {
+                "desserts": "The customer expressed a desire for more dessert options at Blossom Vegan Kitchen and requested dessert recommendations for their upcoming celebration.",
+                "celebrations": "The customer mentioned celebrating a promotion in their email, indicating an interest in special occasions and celebrations."
+              }
             },
             "generated_at": "2025-05-30T16:40:16.629015",
             "summary": "Values: feedback, comfort, elegance. Returning customer. Special needs: gluten-free. Likes staff who are: gracious. Personal interests: desserts, celebrations"
@@ -356,7 +437,17 @@
               ],
               "staff_interaction_preferences": [
                 "friendly"
-              ]
+              ],
+              "customer_values_justifications": {
+                "welcoming atmosphere": "The customer praised Sushi Blossom for its welcoming atmosphere, highlighted by the chef's demonstration and attentive service during their dining experience.",
+                "chef interaction": "The positive review of Sushi Blossom highlights the chef's interaction and demonstration, indicating the customer's value for personalized dining experiences."
+              },
+              "special_accommodations_justifications": {
+                "personalized note on dessert plate": "The customer's request for a personalized note on the dessert plate for a romantic dinner indicates a desire for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The positive review of Sushi Blossom highlights a welcoming atmosphere and attentive service, indicating a preference for friendly staff interactions."
+              }
             },
             "generated_at": "2025-05-30T16:40:18.763193",
             "summary": "Values: welcoming atmosphere, chef interaction. Returning customer. Special needs: personalized note on dessert plate. Likes staff who are: friendly"
@@ -413,7 +504,21 @@
               "staff_interaction_preferences": [
                 "knowledgeable",
                 "attentive"
-              ]
+              ],
+              "customer_values_justifications": {
+                "authentic experience": "The positive review of Pho Real highlights the authentic broth and fresh herbs, indicating a strong value placed on genuine culinary experiences.",
+                "menu explanation": "The inquiry about a kid-friendly menu or half portions indicates a customer value for menu explanations and options suitable for younger diners.",
+                "family-friendly options": "The inquiry about kid-friendly menu options in the email indicates a customer value for family-friendly dining experiences."
+              },
+              "special_accommodations_justifications": {
+                "kid-friendly menu": "The customer inquired about a kid-friendly menu or half portions for their teenage niece, indicating a need for special accommodations.",
+                "smaller portions": "The customer's inquiry about a kid-friendly menu or half portions indicates a need for smaller portion options for their teenage niece."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer appreciated the waitstaff's quick explanations and recommendations at Pho Real, indicating a preference for knowledgeable staff interactions.",
+                "attentive": "The customer appreciated the quick and attentive service at Pho Real, highlighting the waitstaff's ability to explain the menu and make recommendations."
+              },
+              "taste_preferences_justification": "The customer noted the pizza sauce was \"overly sweet,\" indicating a preference against sweet flavors in their dining experience."
             },
             "generated_at": "2025-05-30T16:40:21.092891",
             "summary": "Values: authentic experience, menu explanation, family-friendly options. Special needs: kid-friendly menu, smaller portions. Taste preference: sweet. Likes staff who are: knowledgeable, attentive"
@@ -466,7 +571,16 @@
                 "anniversary cake",
                 "candle moment"
               ],
-              "taste_preferences": "rich"
+              "taste_preferences": "rich",
+              "customer_values_justifications": {
+                "food quality": "The positive mention of the \"intoxicating truffle aroma\" and \"silky\" risotto highlights the importance of food quality to the customer.",
+                "special celebrations": "The customer's inquiry about arranging a special moment for their anniversary highlights their value for personalized experiences during celebrations."
+              },
+              "special_accommodations_justifications": {
+                "anniversary cake": "The customer’s email inquiring about a special arrangement for their 3rd anniversary cake indicates a desire for personalized accommodations.",
+                "candle moment": "The customer’s email requesting a special candle moment for their anniversary indicates a desire for personalized accommodations during their celebration."
+              },
+              "taste_preferences_justification": "The customer’s positive mention of the \"intoxicating truffle aroma\" and \"silky\" risotto indicates a preference for rich, flavorful dishes."
             },
             "generated_at": "2025-05-30T16:40:23.003884",
             "summary": "Values: food quality, special celebrations. Returning customer. Special needs: anniversary cake, candle moment. Taste preference: rich"
@@ -519,7 +633,16 @@
               "special_accommodations": [
                 "celebratory toast"
               ],
-              "taste_preferences": "spicy"
+              "taste_preferences": "spicy",
+              "customer_values_justifications": {
+                "family atmosphere": "The customer emphasized a desire for a celebratory experience with family in their email, highlighting the importance of a family atmosphere.",
+                "quick service": "The customer highlighted \"quick service\" in their review of The Spicy Wok, indicating its importance to their dining experience.",
+                "celebratory experience": "The customer's email requesting a celebratory toast for a promotion indicates a desire for a memorable and festive dining experience."
+              },
+              "special_accommodations_justifications": {
+                "celebratory toast": "The customer's email requesting a celebratory toast for a promotion indicates a desire for special accommodations during their dining experience."
+              },
+              "taste_preferences_justification": "The customer’s review of The Spicy Wok highlights their experience with fiery chili peppers, indicating a preference for spicy flavors."
             },
             "generated_at": "2025-05-30T16:40:25.280192",
             "summary": "Values: family atmosphere, quick service, celebratory experience. Returning customer. Special needs: celebratory toast. Taste preference: spicy"
@@ -577,7 +700,21 @@
               "taste_preferences": "sweet",
               "staff_interaction_preferences": [
                 "attentive"
-              ]
+              ],
+              "customer_values_justifications": {
+                "attentive service": "The customer highlighted \"attentive\" service at Seaside Catch, indicating its importance in their dining experience and overall satisfaction.",
+                "fresh ingredients": "The mention of \"fresh fish tacos\" and \"mango salsa\" in the Seaside Catch review highlights the customer's value for fresh ingredients.",
+                "quick service": "The customer’s email requesting a quick celebratory toast indicates a preference for quick service during their graduation celebration."
+              },
+              "special_accommodations_justifications": {
+                "celebratory toast": "The customer's email requesting a celebratory toast indicates a need for special accommodations for their graduation celebration.",
+                "non-alcoholic options": "The customer’s inquiry about non-alcoholic options for a graduation toast indicates a need for special accommodations.",
+                "scenic spots for photos": "The customer's inquiry about scenic spots for photos indicates a desire for visually appealing settings during their graduation celebration."
+              },
+              "staff_interaction_preferences_justifications": {
+                "attentive": "The customer highlighted \"attentive\" service at Seaside Catch, indicating a preference for positive staff interactions during their dining experience."
+              },
+              "taste_preferences_justification": "The mention of \"mango salsa\" in the Seaside Catch review indicates a preference for sweet flavors in food."
             },
             "generated_at": "2025-05-30T16:40:29.388793",
             "summary": "Values: attentive service, fresh ingredients, quick service. Returning customer. Special needs: celebratory toast, non-alcoholic options, scenic spots for photos. Taste preference: sweet. Likes staff who are: attentive"
@@ -630,7 +767,15 @@
               "special_accommodations": [
                 "dairy-free options"
               ],
-              "taste_preferences": "savory"
+              "taste_preferences": "savory",
+              "customer_values_justifications": {
+                "chef recommendations": "The positive review of Katsu House highlights the chef's recommendation for a sake pairing, indicating the value customers place on expert suggestions.",
+                "food quality": "The positive review of Katsu House highlights high food quality, while the negative review of Blooming Tea Salon emphasizes poor food quality, indicating customer values around food quality."
+              },
+              "special_accommodations_justifications": {
+                "dairy-free options": "The customer's inquiry about dairy-free options for the salmon tartare indicates a need for special accommodations due to their lactose intolerance."
+              },
+              "taste_preferences_justification": "The customer’s positive review of Katsu House highlights a preference for savory flavors, specifically noting the enjoyment of the tangy sauce with the pork."
             },
             "generated_at": "2025-05-30T16:40:37.997325",
             "summary": "Values: chef recommendations, food quality. Special needs: dairy-free options. Taste preference: savory"
@@ -682,7 +827,15 @@
               "special_accommodations": [
                 "small rose on table"
               ],
-              "taste_preferences": "savory"
+              "taste_preferences": "savory",
+              "customer_values_justifications": {
+                "fun experience": "The positive mention of the chef's performance and the enjoyable flaming onion volcano at Hibachi Flame highlights the customer's value for a fun dining experience.",
+                "food quality": "The customer emphasized food quality by praising the guacamole at Casa Verde and highlighting the fried rice at Hibachi Flame as \"on point.\""
+              },
+              "special_accommodations_justifications": {
+                "small rose on table": "The customer's email requesting a small rose for their date night indicates a desire for special accommodations to enhance their dining experience."
+              },
+              "taste_preferences_justification": "The customer’s review of Casa Verde highlights a preference for flavorful dishes, indicating a desire for savory tastes in their dining experience."
             },
             "generated_at": "2025-05-30T16:40:39.863407",
             "summary": "Values: fun experience, food quality. Returning customer. Special needs: small rose on table. Taste preference: savory"
@@ -741,7 +894,22 @@
               "personal_interests": [
                 "sports",
                 "desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "lively atmosphere": "The customer enjoyed the lively atmosphere at Burrito Bash, highlighted by the teasing staff, indicating a preference for vibrant dining experiences.",
+                "good times": "The customer’s positive experience at Burrito Bash, highlighted by the lively staff and enjoyable atmosphere, indicates a value placed on having \"good times.\""
+              },
+              "special_accommodations_justifications": {
+                "quiet proposal": "The customer's email requesting a discreet proposal indicates a preference for subtlety, aligning with the insight of needing special accommodations for a quiet proposal.",
+                "discreet service": "The customer's email request for a discreet proposal indicates a preference for subtlety, aligning with the insight of needing discreet service."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The customer's positive experience at Burrito Bash, highlighted by the lively staff interaction, indicates a preference for friendly staff engagement."
+              },
+              "personal_interests_justifications": {
+                "sports": "The customer’s mention of being teased about supporting the wrong soccer club indicates a personal interest in sports.",
+                "desserts": "The customer's email request for a discreet dessert presentation highlights their interest in desserts, despite their negative review of La Dulce Vida's dessert quality."
+              }
             },
             "generated_at": "2025-05-30T16:40:48.201870",
             "summary": "Values: lively atmosphere, good times. Returning customer. Special needs: quiet proposal, discreet service. Likes staff who are: friendly. Personal interests: sports, desserts"
@@ -800,7 +968,22 @@
               ],
               "personal_interests": [
                 "desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "special occasion celebrations": "The email requesting a candle for a birthday dessert highlights the customer's value on celebrating special occasions.",
+                "staff recommendations": "The positive mention of staff recommending rose tea at Tranquil Noodles highlights the value customers place on personalized suggestions.",
+                "quick service": "The review of Don’s Donuts highlights quick service as a positive aspect, indicating that customers value efficiency for snacks."
+              },
+              "special_accommodations_justifications": {
+                "birthday celebration with candle": "The customer requested a candle in a dessert for their dad's belated birthday celebration, indicating a desire for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer appreciated the staff's recommendation of rose tea at Tranquil Noodles, indicating a preference for knowledgeable staff interactions."
+              },
+              "taste_preferences_justification": "The customer’s email request for a chocolate dessert candle indicates a preference for sweet flavors, supporting the insight on taste preferences.",
+              "personal_interests_justifications": {
+                "desserts": "The customer's email request for a chocolate dessert with a candle indicates a strong personal interest in desserts for special occasions."
+              }
             },
             "generated_at": "2025-05-30T16:40:50.895665",
             "summary": "Values: special occasion celebrations, staff recommendations, quick service. Returning customer. Special needs: birthday celebration with candle. Taste preference: sweet. Likes staff who are: knowledgeable. Personal interests: desserts"
@@ -855,7 +1038,19 @@
               ],
               "staff_interaction_preferences": [
                 "friendly"
-              ]
+              ],
+              "customer_values_justifications": {
+                "staff positivity": "The review of Teriyaki Town highlighted the staff's positivity as a redeeming quality despite the food's shortcomings, indicating its importance to the customer experience.",
+                "value for money": "The positive mention of \"surprisingly good value\" at Steak Shack indicates that customers prioritize value for money in their dining experiences.",
+                "cooking recommendations": "The customer highlighted the \"solid cooking recommendations\" from Steak Shack, indicating the importance of guidance in their dining experience."
+              },
+              "special_accommodations_justifications": {
+                "wheelchair access": "The customer’s email specifically inquired about wheelchair accessibility, indicating a need for special accommodations.",
+                "less spicy palate": "The customer’s email specifically inquired about a tasting menu that accommodates a less spicy palate, indicating a need for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The positive mention of staff's positivity at Teriyaki Town indicates a preference for friendly staff interactions."
+              }
             },
             "generated_at": "2025-05-30T16:40:53.003310",
             "summary": "Values: staff positivity, value for money, cooking recommendations. Special needs: wheelchair access, less spicy palate. Likes staff who are: friendly"
@@ -906,7 +1101,15 @@
               "special_accommodations": [
                 "secluded corner table"
               ],
-              "taste_preferences": "spicy"
+              "taste_preferences": "spicy",
+              "customer_values_justifications": {
+                "flavor balance": "The review of Fiery Curry House highlights the exceptional balance of spice and flavor, directly supporting the insight on customer values regarding flavor balance.",
+                "quiet environment": "The customer's request for a secluded corner table indicates a preference for a quiet environment to enhance their dining experience."
+              },
+              "special_accommodations_justifications": {
+                "secluded corner table": "The customer explicitly requested a secluded corner table in their email for a quiet catch-up with a friend."
+              },
+              "taste_preferences_justification": "The customer praised Fiery Curry House for its perfect balance of spice and flavor, indicating a strong preference for spicy dishes."
             },
             "generated_at": "2025-05-30T16:40:54.674265",
             "summary": "Values: flavor balance, quiet environment. Special needs: secluded corner table. Taste preference: spicy"
@@ -958,7 +1161,15 @@
               "special_accommodations": [
                 "celebration topper on dessert"
               ],
-              "taste_preferences": "savory"
+              "taste_preferences": "savory",
+              "customer_values_justifications": {
+                "fluffy pancakes": "The customer highlighted the \"fluffy pancakes\" at Breakfast & Bloom, indicating a specific value placed on food quality and texture.",
+                "unforgettable marinade": "The customer highlighted the \"unforgettable\" marinade in their review of Skewer World, indicating a strong emotional connection to the food experience."
+              },
+              "special_accommodations_justifications": {
+                "celebration topper on dessert": "The customer's email requesting a \"Congratulations!\" topper for a dessert indicates a desire for special accommodations to enhance a celebratory occasion."
+              },
+              "taste_preferences_justification": "The customer’s preference for savory flavors is evident from their enthusiastic review of Skewer World, highlighting the satisfaction with grilled meats and unforgettable marinade."
             },
             "generated_at": "2025-05-30T16:40:56.633441",
             "summary": "Values: fluffy pancakes, unforgettable marinade. Returning customer. Special needs: celebration topper on dessert. Taste preference: savory"
@@ -1013,7 +1224,18 @@
               ],
               "personal_interests": [
                 "photography"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quality food": "The positive mention of \"rich broth\" and \"perfect soft-boiled egg\" in the Ramen Heights review highlights the customer's value for quality food.",
+                "patience for wait times": "The review of Ramen Heights highlights that the long queue is \"worth it if you have time,\" indicating customers value patience for quality dining experiences."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The customer noted the staff at Bella Pizzeria were pleasant, indicating a preference for friendly staff interactions."
+              },
+              "taste_preferences_justification": "The customer praised Ramen Heights for its \"rich broth,\" indicating a strong preference for flavorful dishes.",
+              "personal_interests_justifications": {
+                "photography": "The customer's email inquiry about taking professional-level photos of dishes indicates a personal interest in photography."
+              }
             },
             "generated_at": "2025-05-30T16:40:58.463303",
             "summary": "Values: quality food, patience for wait times. Returning customer. Taste preference: rich. Likes staff who are: friendly. Personal interests: photography"
@@ -1068,7 +1290,18 @@
               ],
               "personal_interests": [
                 "local culture"
-              ]
+              ],
+              "customer_values_justifications": {
+                "authentic experience": "The BBQ Barn review highlights the importance of an authentic experience, as the customer appreciated the pitmaster's engagement and the southern atmosphere.",
+                "conversation": "The BBQ Barn review highlights the importance of personal interaction and atmosphere, indicating that customers value engaging conversations during their dining experience."
+              },
+              "staff_interaction_preferences_justifications": {
+                "chatty": "The customer appreciated the chatty interaction with the pitmaster at BBQ Barn, indicating a preference for engaging staff interactions."
+              },
+              "taste_preferences_justification": "The customer’s inquiry about a tasting menu that can handle \"mild spiciness\" indicates a preference for less spicy flavors.",
+              "personal_interests_justifications": {
+                "local culture": "The customer's positive experience at BBQ Barn highlights their interest in local culture and authentic dining experiences, as evidenced by their engagement with the pitmaster."
+              }
             },
             "generated_at": "2025-05-30T16:41:00.148072",
             "summary": "Values: authentic experience, conversation. Returning customer. Taste preference: spicy. Likes staff who are: chatty. Personal interests: local culture"
@@ -1124,7 +1357,19 @@
               "taste_preferences": "savory",
               "staff_interaction_preferences": [
                 "knowledgeable"
-              ]
+              ],
+              "customer_values_justifications": {
+                "variety": "The customer appreciated the variety of small plates at Urban Tapas, indicating a value for diverse dining experiences.",
+                "food quality": "The positive mention of the carbonara at Pasta & Co. highlights the importance of food quality to the customer.",
+                "informative experience": "The customer's appreciation for the manager's lesson at Pasta & Co. highlights their value for informative experiences during dining."
+              },
+              "special_accommodations_justifications": {
+                "quiet birthday celebration": "The customer's email requesting a quiet 'Happy Birthday' on a small dessert plate indicates a preference for a low-key celebration."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer appreciated the manager's informative interaction about pancetta and bacon, indicating a preference for knowledgeable staff engagement."
+              },
+              "taste_preferences_justification": "The customer enjoyed savory dishes like carbonara and patatas bravas, indicating a preference for flavorful, savory options."
             },
             "generated_at": "2025-05-30T16:41:02.504313",
             "summary": "Values: variety, food quality, informative experience. Returning customer. Special needs: quiet birthday celebration. Taste preference: savory. Likes staff who are: knowledgeable"
@@ -1178,7 +1423,18 @@
               "taste_preferences": "sweet",
               "staff_interaction_preferences": [
                 "enthusiastic"
-              ]
+              ],
+              "customer_values_justifications": {
+                "staff energy": "The positive mention of \"the staff’s energy was terrific\" in the Fiesta Pizza review highlights the importance of staff engagement to customers.",
+                "low-key celebration": "The customer's request for a low-key engagement celebration indicates a preference for subtlety and intimacy in special occasions."
+              },
+              "special_accommodations_justifications": {
+                "low-key engagement announcement": "The customer's email request for a low-key engagement announcement indicates a preference for subtlety and discretion during special occasions."
+              },
+              "staff_interaction_preferences_justifications": {
+                "enthusiastic": "The customer's positive mention of \"the staff’s energy was terrific\" at Fiesta Pizza indicates a preference for enthusiastic staff interactions."
+              },
+              "taste_preferences_justification": "The customer mentioned that the sweet crepe was \"marginally better,\" indicating a preference for sweeter flavors."
             },
             "generated_at": "2025-05-30T16:41:04.675334",
             "summary": "Values: staff energy, low-key celebration. Special needs: low-key engagement announcement. Taste preference: sweet. Likes staff who are: enthusiastic"
@@ -1235,7 +1491,20 @@
               "personal_interests": [
                 "travel",
                 "wine"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quality food": "The positive mention of the \"top-notch\" roasted eggplant dip and the highlight of the milkshake indicate a strong appreciation for quality food.",
+                "helpful staff": "The customer highlighted the server's travel tips for Greece at Mediterranean Wave, indicating the value of helpful staff in enhancing their dining experience."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer appreciated the server's travel tips for Greece, indicating a preference for knowledgeable staff interactions.",
+                "friendly": "The customer appreciated the server's travel tips at Mediterranean Wave, indicating a preference for friendly staff interactions."
+              },
+              "taste_preferences_justification": "The customer highlighted the milkshake as the highlight of their experience, indicating a preference for sweet flavors.",
+              "personal_interests_justifications": {
+                "travel": "The customer's positive mention of travel tips for Greece in their Mediterranean Wave review indicates a personal interest in travel.",
+                "wine": "The customer's inquiry about wine pairing with escargots indicates a personal interest in wine."
+              }
             },
             "generated_at": "2025-05-30T16:41:06.461754",
             "summary": "Values: quality food, helpful staff. Returning customer. Taste preference: sweet. Likes staff who are: knowledgeable, friendly. Personal interests: travel, wine"
@@ -1290,7 +1559,16 @@
               "special_accommodations": [
                 "peanut allergy"
               ],
-              "taste_preferences": "spicy"
+              "taste_preferences": "spicy",
+              "customer_values_justifications": {
+                "flavorful food": "The customer praised Curry Culture for its \"flavor explosion\" and layered spices, highlighting their value for flavorful food.",
+                "authentic ingredients": "The mention of importing spices directly from India in the Curry Culture review highlights the customer's value for authentic ingredients.",
+                "quick service": "The customer mentioned they would return to BBQ Express for quick BBQ, indicating a value placed on quick service."
+              },
+              "special_accommodations_justifications": {
+                "peanut allergy": "The customer explicitly mentioned their peanut allergy in the email, indicating a need for special accommodations regarding menu items."
+              },
+              "taste_preferences_justification": "The customer praised the spicy vindaloo at Curry Culture, indicating a preference for bold flavors."
             },
             "generated_at": "2025-05-30T16:41:08.403309",
             "summary": "Values: flavorful food, authentic ingredients, quick service. Returning customer. Special needs: peanut allergy. Taste preference: spicy"
@@ -1348,7 +1626,19 @@
               "personal_interests": [
                 "sports",
                 "wine"
-              ]
+              ],
+              "customer_values_justifications": {
+                "conversation": "The positive review of Tapas Torero highlights the value of engaging conversations, while the email inquiry reflects a desire for personalized dining experiences.",
+                "cozy atmosphere": "The positive review of Tapas Torero highlights a \"cozy and fun\" atmosphere, indicating the customer's value for a welcoming dining experience."
+              },
+              "staff_interaction_preferences_justifications": {
+                "chatty": "The positive review of Tapas Torero highlights a friendly interaction with the bartender, indicating a preference for chatty staff interactions."
+              },
+              "taste_preferences_justification": "The customer’s inquiry about pairing salmon en papillote with pinot noir indicates a preference for savory flavors in their dining experience.",
+              "personal_interests_justifications": {
+                "sports": "The customer expressed interest in sports by chatting with the bartender about Spain’s soccer league during their visit to Tapas Torero.",
+                "wine": "The customer's inquiry about a corkage fee and wine pairing indicates a strong interest in wine."
+              }
             },
             "generated_at": "2025-05-30T16:41:10.232139",
             "summary": "Values: conversation, cozy atmosphere. Returning customer. Taste preference: savory. Likes staff who are: chatty. Personal interests: sports, wine"
@@ -1402,7 +1692,18 @@
               "taste_preferences": "sweet",
               "personal_interests": [
                 "desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "flavor variety": "The customer appreciates diverse flavors, as seen in their positive review of Fusion Tastes' unique kimchi tacos and the request for macarons as a dessert surprise.",
+                "surprise element": "The customer's request to pre-order macarons as a surprise for their wife highlights the importance of surprise elements in enhancing dining experiences."
+              },
+              "special_accommodations_justifications": {
+                "pre-order dessert": "The customer's email requesting to pre-order macarons indicates a desire for special accommodations regarding dessert."
+              },
+              "taste_preferences_justification": "The customer noted the pulled pork sauce was \"overly sweet,\" indicating a preference for less sweetness in flavors.",
+              "personal_interests_justifications": {
+                "desserts": "The customer's email requesting to pre-order macarons indicates a strong interest in desserts."
+              }
             },
             "generated_at": "2025-05-30T16:41:12.316276",
             "summary": "Values: flavor variety, surprise element. Special needs: pre-order dessert. Taste preference: sweet. Personal interests: desserts"
@@ -1453,7 +1754,14 @@
               "is_new_customer": false,
               "special_accommodations": [
                 "shellfish allergy"
-              ]
+              ],
+              "customer_values_justifications": {
+                "fresh ingredients": "The positive review of Paella Plaza highlights the freshness of seafood, emphasizing the importance of fresh ingredients to customer satisfaction.",
+                "satisfactory meals": "The positive review of Paella Plaza highlights a satisfactory meal experience, while the negative review of Pita Paradise indicates dissatisfaction, reinforcing the importance of meal quality."
+              },
+              "special_accommodations_justifications": {
+                "shellfish allergy": "The customer's email explicitly requests a modification for a shellfish course due to their allergy, indicating a need for special accommodations."
+              }
             },
             "generated_at": "2025-05-30T16:41:13.977597",
             "summary": "Values: fresh ingredients, satisfactory meals. Returning customer. Special needs: shellfish allergy"
@@ -1511,7 +1819,21 @@
               "taste_preferences": "savory",
               "staff_interaction_preferences": [
                 "friendly"
-              ]
+              ],
+              "customer_values_justifications": {
+                "variety of dishes": "The positive mention of the variety of banchan at Kimchi Kingdom highlights the customer's appreciation for diverse dish options.",
+                "friendly staff": "The customer highlighted the friendly staff in their review of Crepe Creations, indicating that positive service is valued.",
+                "quiet celebration": "The customer's request for a discreet celebration without singing or fuss indicates a preference for a quiet and understated experience."
+              },
+              "special_accommodations_justifications": {
+                "quiet table": "The customer's request for a discreet celebration with no singing or fuss indicates a preference for a quiet dining experience.",
+                "discreet celebration": "The customer explicitly requested a discreet celebration for their 10th anniversary, indicating a preference for subtlety over attention.",
+                "custom dessert note": "The customer requested a discreet celebration for their anniversary, specifically asking for a custom note on the dessert plate."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The customer noted that the staff at Crepe Creations was friendly, indicating a positive interaction preference."
+              },
+              "taste_preferences_justification": "The customer rated Crepe Creations 3/5, noting the savory crepes were decent, indicating a preference for savory flavors over sweet."
             },
             "generated_at": "2025-05-30T16:41:15.881869",
             "summary": "Values: variety of dishes, friendly staff, quiet celebration. Returning customer. Special needs: quiet table, discreet celebration, custom dessert note. Taste preference: savory. Likes staff who are: friendly"
@@ -1563,7 +1885,14 @@
               ],
               "special_accommodations": [
                 "birthday celebrations"
-              ]
+              ],
+              "customer_values_justifications": {
+                "fresh ingredients": "The positive review of Hot Pot Harmony highlights \"incredibly fresh ingredients,\" indicating that freshness is a valued aspect for the customer.",
+                "customizing sauces": "The customer highlighted their enjoyment of customizing dipping sauces at Hot Pot Harmony, indicating a strong value for personalization in their dining experience."
+              },
+              "special_accommodations_justifications": {
+                "birthday celebrations": "The customer's inquiry about bringing flowers for a birthday celebration indicates a desire for special accommodations during significant events."
+              }
             },
             "generated_at": "2025-05-30T16:41:17.436850",
             "summary": "Values: fresh ingredients, customizing sauces. Special needs: birthday celebrations"
@@ -1615,7 +1944,15 @@
               "special_accommodations": [
                 "group seating"
               ],
-              "taste_preferences": "savory"
+              "taste_preferences": "savory",
+              "customer_values_justifications": {
+                "staff recommendations": "The positive mention of staff recommending a unique cheddar-thyme loaf in the Dough & Co. review highlights the value customers place on staff recommendations.",
+                "unique flavors": "The recommendation of a unique cheddar-thyme loaf at Dough & Co. highlights the customer's appreciation for distinctive flavors in their dining experiences."
+              },
+              "special_accommodations_justifications": {
+                "group seating": "The customer's email inquiring about seating arrangements for a family reunion indicates a need for special accommodations regarding group seating."
+              },
+              "taste_preferences_justification": "The customer’s mention of under-seasoned chicken at Fajita Fiesta indicates a preference for more savory flavors in their dining experience."
             },
             "generated_at": "2025-05-30T16:41:19.063488",
             "summary": "Values: staff recommendations, unique flavors. Returning customer. Special needs: group seating. Taste preference: savory"
@@ -1668,7 +2005,16 @@
               "personal_interests": [
                 "food photography",
                 "food blogging"
-              ]
+              ],
+              "customer_values_justifications": {
+                "healthy dishes": "The positive review of Veggie Vitae highlights the appeal of healthy vegan dishes, indicating that health-conscious options are valued by the customer.",
+                "flavorful food": "The positive review of Veggie Vitae highlights the importance of flavorful food, specifically praising the tofu scramble as the best experienced recently."
+              },
+              "taste_preferences_justification": "The customer praised the flavorful tofu scramble, indicating a preference for savory dishes, while their disappointment at Ceviche Central suggests a desire for fresh, well-seasoned food.",
+              "personal_interests_justifications": {
+                "food photography": "The customer's email request to photograph each course for their food blog indicates a personal interest in food photography.",
+                "food blogging": "The customer's email about photographing each course for their food blog indicates a personal interest in food blogging."
+              }
             },
             "generated_at": "2025-05-30T16:41:20.875157",
             "summary": "Values: healthy dishes, flavorful food. Returning customer. Taste preference: savory. Personal interests: food photography, food blogging"
@@ -1724,7 +2070,19 @@
               "personal_interests": [
                 "art",
                 "local culture"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quick service": "The customer highlighted \"quick service\" in their review of Noodle Infinity, indicating its importance to their dining experience.",
+                "local products": "The customer’s enthusiasm for discovering a local blue cheese in their review of Cider & Cheese highlights their value for local products."
+              },
+              "special_accommodations_justifications": {
+                "semi-private space": "The customer's email requesting a semi-private space for a corporate dinner indicates a need for special accommodations for their team of eight."
+              },
+              "taste_preferences_justification": "The customer’s review of Noodle Infinity highlights a preference for less salty flavors, indicating a taste preference for savory dishes.",
+              "personal_interests_justifications": {
+                "art": "The customer's enthusiasm for artisanal cheese and specialty ciders indicates a strong interest in gourmet food and culinary arts.",
+                "local culture": "The customer's enthusiasm for local artisanal cheese in their review highlights their interest in local culture and unique culinary experiences."
+              }
             },
             "generated_at": "2025-05-30T16:41:22.847916",
             "summary": "Values: quick service, local products. Returning customer. Special needs: semi-private space. Taste preference: savory. Personal interests: art, local culture"
@@ -1778,7 +2136,15 @@
               "special_accommodations": [
                 "severe shellfish allergy"
               ],
-              "taste_preferences": "sweet"
+              "taste_preferences": "sweet",
+              "customer_values_justifications": {
+                "food safety": "The customer's severe shellfish allergy highlighted in their email underscores the critical importance of food safety in their dining experience.",
+                "clear communication": "The customer's severe shellfish allergy highlighted the need for clear communication, as evidenced by their disappointment with the oyster sauce in the Kyoto Express review."
+              },
+              "special_accommodations_justifications": {
+                "severe shellfish allergy": "The customer explicitly stated their severe shellfish allergy in an email and expressed disappointment when it was not accommodated at Kyoto Express."
+              },
+              "taste_preferences_justification": "The customer enjoyed the sweet balance of the maple-glazed bacon in their review, indicating a preference for sweet flavors."
             },
             "generated_at": "2025-05-30T16:41:24.945895",
             "summary": "Values: food safety, clear communication. Returning customer. Special needs: severe shellfish allergy. Taste preference: sweet"
@@ -1837,7 +2203,22 @@
               ],
               "personal_interests": [
                 "desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quality food": "The customer praised the \"falling-off-the-bone ribs\" and \"best cornbread,\" indicating a strong preference for high-quality food.",
+                "variety of sauces": "The customer mentioned enjoying the \"variety of sauces\" at Burger Stack, indicating that diverse options are valued in their dining experience.",
+                "cooking tips": "The customer appreciated receiving smoking techniques from the pitmaster, indicating a value for cooking tips and culinary knowledge."
+              },
+              "special_accommodations_justifications": {
+                "birthday celebration": "The customer requested a small surprise dessert with a candle for a birthday dinner, indicating a celebration."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer appreciated the pitmaster's smoking tips, indicating a preference for knowledgeable staff interactions."
+              },
+              "taste_preferences_justification": "The customer praised the savory ribs and cornbread, indicating a strong preference for rich, flavorful dishes.",
+              "personal_interests_justifications": {
+                "desserts": "The customer requested a miniature dessert for a birthday celebration, indicating an interest in desserts."
+              }
             },
             "generated_at": "2025-05-30T16:41:27.047459",
             "summary": "Values: quality food, variety of sauces, cooking tips. Returning customer. Special needs: birthday celebration. Taste preference: savory. Likes staff who are: knowledgeable. Personal interests: desserts"
@@ -1890,7 +2271,16 @@
               "personal_interests": [
                 "photography",
                 "social media"
-              ]
+              ],
+              "customer_values_justifications": {
+                "authentic experience": "The positive review of Rice & Spice highlights the authentic flavors of the dishes, indicating the customer's value for genuine culinary experiences.",
+                "food quality": "The positive review of Rice & Spice highlights outstanding food quality, while the negative feedback for Tapas & Tunes emphasizes bland and greasy dishes."
+              },
+              "taste_preferences_justification": "The customer praised Rice & Spice for its authentic Thai dishes with a \"real authentic kick,\" indicating a preference for spicy flavors.",
+              "personal_interests_justifications": {
+                "photography": "The customer expressed an interest in photography by asking permission to take pictures for their Instagram, indicating a personal interest in food photography.",
+                "social media": "The customer's email about taking food photos for Instagram indicates a personal interest in social media and photography."
+              }
             },
             "generated_at": "2025-05-30T16:41:28.945203",
             "summary": "Values: authentic experience, food quality. Returning customer. Taste preference: spicy. Personal interests: photography, social media"
@@ -1947,7 +2337,21 @@
               ],
               "personal_interests": [
                 "live music"
-              ]
+              ],
+              "customer_values_justifications": {
+                "local recommendations": "The customer highlighted a favorite local hot sauce brand recommended by Cajun Kitchen, indicating a value for local recommendations.",
+                "friendly staff": "The customer highlighted the \"friendly staff\" at Harbor Diner, indicating that this aspect is valued in their dining experience."
+              },
+              "special_accommodations_justifications": {
+                "seating near piano/live music": "The customer’s email specifically requests seating near a piano area, indicating a preference for live music accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The customer noted the \"friendly staff\" at Harbor Diner, highlighting their positive interaction despite the food quality."
+              },
+              "taste_preferences_justification": "The customer enjoyed the \"great kick\" in the jambalaya, indicating a preference for spicy flavors.",
+              "personal_interests_justifications": {
+                "live music": "The customer's email specifically requests seating near a piano area, indicating a personal interest in live music."
+              }
             },
             "generated_at": "2025-05-30T16:41:30.910457",
             "summary": "Values: local recommendations, friendly staff. Special needs: seating near piano/live music. Taste preference: spicy. Likes staff who are: friendly. Personal interests: live music"
@@ -1999,7 +2403,16 @@
               ],
               "personal_interests": [
                 "French cuisine"
-              ]
+              ],
+              "customer_values_justifications": {
+                "authentic experience": "The positive review of La Fonda Mexicana highlights an \"authentic experience,\" emphasizing the delicious mole sauce and homemade tortillas, which aligns with customer values."
+              },
+              "special_accommodations_justifications": {
+                "child-friendly options": "The customer email specifically requests a simpler dish or smaller portion for a child, indicating a need for child-friendly options."
+              },
+              "personal_interests_justifications": {
+                "French cuisine": "The customer’s email inquiry about a simpler dish for their child indicates a personal interest in French cuisine tailored for a family-friendly experience."
+              }
             },
             "generated_at": "2025-05-30T16:41:32.752069",
             "summary": "Values: authentic experience. Special needs: child-friendly options. Personal interests: French cuisine"
@@ -2052,7 +2465,16 @@
                 "low-key birthday celebration",
                 "no singing"
               ],
-              "taste_preferences": "sweet"
+              "taste_preferences": "sweet",
+              "customer_values_justifications": {
+                "quality food": "The customer praised the \"insanely fluffy pancakes\" and \"homemade syrups,\" indicating a strong appreciation for high-quality food.",
+                "unique flavor combinations": "The customer's praise for the \"maple-bacon combo\" in the pancakes highlights their appreciation for unique flavor combinations."
+              },
+              "special_accommodations_justifications": {
+                "low-key birthday celebration": "The customer explicitly requested a low-key celebration for their 25th birthday in their email, indicating a preference for a relaxed atmosphere.",
+                "no singing": "The customer explicitly requested \"no singing\" for their 25th birthday celebration in their email, indicating a preference for a low-key atmosphere."
+              },
+              "taste_preferences_justification": "The customer noted that the BBQ sauce was \"a bit too sweet,\" indicating a preference for less sweetness in their food."
             },
             "generated_at": "2025-05-30T16:41:34.796901",
             "summary": "Values: quality food, unique flavor combinations. Returning customer. Special needs: low-key birthday celebration, no singing. Taste preference: sweet"
@@ -2106,7 +2528,15 @@
               "taste_preferences": "spicy",
               "personal_interests": [
                 "cocktails"
-              ]
+              ],
+              "customer_values_justifications": {
+                "fun dining experience": "The customer's enjoyment of cooking their meal at Dak Galbi House highlights their value for a fun and interactive dining experience.",
+                "variety in menu": "The customer appreciated the variety in the set menu at Tempura Palace, indicating that menu diversity is a valued aspect of their dining experience."
+              },
+              "taste_preferences_justification": "The customer praised the spicy stir-fry at Dak Galbi House, indicating a preference for bold flavors in their dining experience.",
+              "personal_interests_justifications": {
+                "cocktails": "The customer's email requesting an early arrival for cocktails indicates a specific interest in enjoying drinks before their meal."
+              }
             },
             "generated_at": "2025-05-30T16:41:36.793137",
             "summary": "Values: fun dining experience, variety in menu. Returning customer. Taste preference: spicy. Personal interests: cocktails"
@@ -2163,7 +2593,20 @@
               ],
               "personal_interests": [
                 "family"
-              ]
+              ],
+              "customer_values_justifications": {
+                "knowledgeable staff": "The customer praised the barista's knowledge in their review of Crema Coffee & Brunch, highlighting the value placed on knowledgeable staff.",
+                "quality espresso drinks": "The customer praised Crema Coffee & Brunch for its \"incredible espresso drinks,\" highlighting the importance of quality in their dining experience."
+              },
+              "special_accommodations_justifications": {
+                "celebratory note or card": "The customer’s email requesting a celebratory note for his nephew's scholarship indicates a desire for special accommodations during their dining experience."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer praised the barista's knowledge at Crema Coffee & Brunch, highlighting the importance of knowledgeable staff interactions in enhancing the dining experience."
+              },
+              "personal_interests_justifications": {
+                "family": "The customer’s email requesting a special acknowledgment for their nephew's scholarship celebration highlights their emphasis on family-oriented experiences."
+              }
             },
             "generated_at": "2025-05-30T16:41:39.051006",
             "summary": "Values: knowledgeable staff, quality espresso drinks. Returning customer. Special needs: celebratory note or card. Likes staff who are: knowledgeable. Personal interests: family"
@@ -2222,7 +2665,22 @@
               ],
               "personal_interests": [
                 "sports"
-              ]
+              ],
+              "customer_values_justifications": {
+                "variety of sauces": "The customer highlighted the good variety of sauces at Wing It!, indicating that diverse options are valued in their dining experience.",
+                "hot and crispy food": "The customer highlighted the importance of \"hot and crispy\" wings in their review of Wing It!, indicating a value for food quality.",
+                "fun atmosphere": "The customer highlighted a \"fun atmosphere\" at Burger Oasis, noting the manager's jokes about local baseball stats, which contributed to their positive experience."
+              },
+              "special_accommodations_justifications": {
+                "table with enough aisle space": "The customer's email specifically requests a table with enough aisle space to accommodate their partner's cane, indicating a need for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The customer's positive experience at Burger Oasis, highlighted by the manager's friendly interaction, indicates a preference for friendly staff interactions."
+              },
+              "taste_preferences_justification": "The customer’s positive feedback on the savory flavors of the wings and juicy burgers indicates a preference for savory taste experiences.",
+              "personal_interests_justifications": {
+                "sports": "The customer mentioned enjoying the manager's jokes about local baseball stats, indicating an interest in sports."
+              }
             },
             "generated_at": "2025-05-30T16:41:41.287315",
             "summary": "Values: variety of sauces, hot and crispy food, fun atmosphere. Returning customer. Special needs: table with enough aisle space. Taste preference: savory. Likes staff who are: friendly. Personal interests: sports"
@@ -2274,7 +2732,15 @@
               "special_accommodations": [
                 "custom dessert message"
               ],
-              "taste_preferences": "savory"
+              "taste_preferences": "savory",
+              "customer_values_justifications": {
+                "craft beer variety": "The positive mention of a \"well-curated craft beer list\" at Brew & Stew highlights the customer's appreciation for craft beer variety.",
+                "hearty meals": "The customer’s positive review of Brew & Stew highlights their appreciation for hearty meals, specifically mentioning the beef stew as a standout dish."
+              },
+              "special_accommodations_justifications": {
+                "custom dessert message": "The customer's email request for a custom dessert message to celebrate their daughter's college acceptance indicates a desire for special accommodations."
+              },
+              "taste_preferences_justification": "The customer’s positive review of Brew & Stew highlights a preference for hearty, savory dishes, contrasting with their dissatisfaction at Wok & Roll's overly saucy stir-fries."
             },
             "generated_at": "2025-05-30T16:41:43.199016",
             "summary": "Values: craft beer variety, hearty meals. Returning customer. Special needs: custom dessert message. Taste preference: savory"
@@ -2326,7 +2792,15 @@
               "special_accommodations": [
                 "small group celebration",
                 "note on dessert plate"
-              ]
+              ],
+              "customer_values_justifications": {
+                "variety of vegetarian options": "The customer highlighted their appreciation for the variety of vegetarian broths in their review of Noodle Nirvana, indicating a value for diverse vegetarian options.",
+                "quality of ingredients": "The positive review of Noodle Nirvana highlights the quality of homemade udon, while the negative review of Quick Fish Taco emphasizes poor ingredient quality."
+              },
+              "special_accommodations_justifications": {
+                "small group celebration": "The customer’s email about a small dinner celebration for sharing their pregnancy news indicates a desire for special accommodations for a meaningful occasion.",
+                "note on dessert plate": "The customer's email about a special announcement indicates a desire for personalized touches, justifying the insight for a note on the dessert plate."
+              }
             },
             "generated_at": "2025-05-30T16:41:45.391869",
             "summary": "Values: variety of vegetarian options, quality of ingredients. Returning customer. Special needs: small group celebration, note on dessert plate"
@@ -2377,7 +2851,15 @@
               "taste_preferences": "rich",
               "personal_interests": [
                 "desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quality of baked goods": "The positive review of Baguette & Butter highlights the quality of their baked goods, emphasizing flaky croissants and rich quiche, indicating customer value in high-quality pastries.",
+                "authentic flavors": "The positive review of Baguette & Butter highlights the authentic French flavors, contrasting with the negative experience at Little India, indicating a preference for genuine tastes."
+              },
+              "taste_preferences_justification": "The customer praised the quiche at Baguette & Butter for being \"rich without being heavy,\" indicating a preference for rich flavors in their food.",
+              "personal_interests_justifications": {
+                "desserts": "The customer's inquiry about a dessert sampler indicates a strong interest in trying multiple sweets, highlighting their preference for desserts."
+              }
             },
             "generated_at": "2025-05-30T16:41:47.817917",
             "summary": "Values: quality of baked goods, authentic flavors. Taste preference: rich. Personal interests: desserts"
@@ -2434,7 +2916,20 @@
               "personal_interests": [
                 "travel",
                 "local culture"
-              ]
+              ],
+              "customer_values_justifications": {
+                "cozy ambiance": "The customer mentioned the \"cozy\" ambiance at Brunch Haven, indicating its importance in their dining experience.",
+                "passionate chef interaction": "The customer's review of Sushi Den highlights the chef's passionate interaction about fish markets, indicating the value placed on personal engagement and expertise."
+              },
+              "staff_interaction_preferences_justifications": {
+                "chatty": "The customer appreciated the chef's passionate interaction at Sushi Den, indicating a preference for chatty staff interactions.",
+                "passionate": "The customer highlighted the chef's passion during their visit to Sushi Den, indicating a preference for engaging staff interactions."
+              },
+              "taste_preferences_justification": "The customer expressed a preference for brunch items in their email, indicating a strong inclination towards brunch-style dining experiences.",
+              "personal_interests_justifications": {
+                "travel": "The customer's enthusiasm for the chef's knowledge of Tokyo's fish markets indicates a strong interest in travel and culinary experiences.",
+                "local culture": "The customer's interest in brunch and local culinary experiences, as seen in their email and review of Sushi Den, highlights their appreciation for local culture."
+              }
             },
             "generated_at": "2025-05-30T16:41:50.071521",
             "summary": "Values: cozy ambiance, passionate chef interaction. Returning customer. Taste preference: light. Likes staff who are: chatty, passionate. Personal interests: travel, local culture"
@@ -2490,7 +2985,19 @@
               "taste_preferences": "savory",
               "staff_interaction_preferences": [
                 "indifferent"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quality ingredients": "The positive review of Deli Delight highlights the quality of ingredients in the Reuben sandwich, while the negative experience at Green Garden Sushi emphasizes dissatisfaction with food quality.",
+                "friendly service": "The negative experience at Green Garden Sushi highlighted the importance of friendly service, as the customer felt let down by indifferent staff."
+              },
+              "special_accommodations_justifications": {
+                "no shellfish": "The customer's email explicitly requests no shellfish or fish sauce in their meal, indicating a preference for special accommodations.",
+                "no fish sauce": "The customer's email explicitly requests no fish sauce in their meal, indicating a preference for special accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "indifferent": "The customer's negative experience at Green Garden Sushi, particularly the indifferent service regarding their fish order, indicates a preference for attentive staff interaction."
+              },
+              "taste_preferences_justification": "The customer’s preference for avoiding shellfish and fish sauce indicates a taste preference for savory flavors without seafood."
             },
             "generated_at": "2025-05-30T16:41:52.229675",
             "summary": "Values: quality ingredients, friendly service. Returning customer. Special needs: no shellfish, no fish sauce. Taste preference: savory. Likes staff who are: indifferent"
@@ -2550,7 +3057,23 @@
               "personal_interests": [
                 "wine",
                 "music"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quality food": "The customer praised the top-tier steak and robust wine list at Steakhouse Prime, highlighting their value for quality food.",
+                "wine pairing": "The customer highlighted a fantastic Malbec pairing with their steak, indicating a strong appreciation for wine pairing in their dining experience."
+              },
+              "special_accommodations_justifications": {
+                "live music performance": "The customer's email inquiring about a live music performance for a special engagement indicates a desire for unique accommodations."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer appreciated the staff's wine recommendation at Steakhouse Prime, indicating a preference for knowledgeable staff interactions.",
+                "polite": "The customer noted that the service at Sunshine Sushi was polite, despite their dissatisfaction with the food quality."
+              },
+              "taste_preferences_justification": "The customer’s preference for a top-tier steak at Steakhouse Prime indicates a strong inclination towards savory flavors.",
+              "personal_interests_justifications": {
+                "wine": "The customer highlighted a robust wine list and a recommended Malbec at Steakhouse Prime, indicating a strong interest in wine.",
+                "music": "The customer's email about planning a proposal with a string quartet indicates a personal interest in music."
+              }
             },
             "generated_at": "2025-05-30T16:41:54.244741",
             "summary": "Values: quality food, wine pairing. Returning customer. Special needs: live music performance. Taste preference: savory. Likes staff who are: knowledgeable, polite. Personal interests: wine, music"
@@ -2606,7 +3129,19 @@
               "taste_preferences": "spicy",
               "personal_interests": [
                 "theater"
-              ]
+              ],
+              "customer_values_justifications": {
+                "variety of spice levels": "The mention of \"multiple good heat levels\" at the salsa bar and the \"real kick\" in the spicy tuna roll highlights the customer's appreciation for a variety of spice levels.",
+                "fresh ingredients": "The positive mention of \"fresh fish\" in the Sushi Bolt review highlights the customer's value for fresh ingredients in their dining experience.",
+                "timely service": "The customer's email request for timely service before an 8 PM show indicates their value for efficient dining experiences."
+              },
+              "special_accommodations_justifications": {
+                "meal timing for pre-theater": "The customer's email requesting a timely dining experience before an 8 PM show indicates a need for special accommodations regarding meal timing."
+              },
+              "taste_preferences_justification": "The customer highlighted enjoying the \"real kick\" of the spicy tuna roll, indicating a preference for spicy flavors.",
+              "personal_interests_justifications": {
+                "theater": "The customer's email about needing timely dining before an 8 PM show indicates a strong interest in theater."
+              }
             },
             "generated_at": "2025-05-30T16:41:56.327592",
             "summary": "Values: variety of spice levels, fresh ingredients, timely service. Returning customer. Special needs: meal timing for pre-theater. Taste preference: spicy. Personal interests: theater"
@@ -2662,7 +3197,19 @@
               "personal_interests": [
                 "sports",
                 "wine"
-              ]
+              ],
+              "customer_values_justifications": {
+                "fun conversation": "The customer highlighted a \"fun conversation about college football rivalries\" during their visit to Burger Royale, indicating the value they place on enjoyable interactions.",
+                "pleasant atmosphere": "The customer noted the \"pleasant atmosphere\" at Sea Shore Diner, indicating its importance in their dining experience."
+              },
+              "staff_interaction_preferences_justifications": {
+                "friendly": "The positive experience at Burger Royale, highlighted by a fun conversation, indicates a preference for friendly staff interactions."
+              },
+              "taste_preferences_justification": "The customer’s preference for a \"massive, juicy burger\" and a desire for a perfect wine pairing indicate a strong inclination towards savory flavors.",
+              "personal_interests_justifications": {
+                "sports": "The customer engaged in a fun conversation about college football rivalries at Burger Royale, indicating a personal interest in sports.",
+                "wine": "The customer's email specifically requests a wine pairing suggestion, indicating a strong interest in wine."
+              }
             },
             "generated_at": "2025-05-30T16:41:58.643393",
             "summary": "Values: fun conversation, pleasant atmosphere. Returning customer. Taste preference: savory. Likes staff who are: friendly. Personal interests: sports, wine"
@@ -2714,7 +3261,16 @@
               "special_accommodations": [
                 "no cilantro"
               ],
-              "taste_preferences": "rich"
+              "taste_preferences": "rich",
+              "customer_values_justifications": {
+                "creamy texture": "The customer highlighted the \"super creamy\" refried beans in their review, indicating a preference for creamy textures in their food.",
+                "balanced spice": "The request for more spice in the mole sauce and the uneven distribution of toppings in the burger highlight the customer's value for balanced flavor.",
+                "quality ingredients": "The emphasis on rich flavors in the mole sauce and the request for allergen-free options highlight the customers' value for quality ingredients."
+              },
+              "special_accommodations_justifications": {
+                "no cilantro": "The customer's email explicitly requests the exclusion of cilantro from the tasting menu due to a strong aversion, indicating a need for special accommodations."
+              },
+              "taste_preferences_justification": "The customer praised the \"rich, velvety mole sauce,\" indicating a strong preference for rich flavors in their dining experience."
             },
             "generated_at": "2025-05-30T16:42:00.930325",
             "summary": "Values: creamy texture, balanced spice, quality ingredients. Special needs: no cilantro. Taste preference: rich"
@@ -2770,7 +3326,19 @@
               ],
               "personal_interests": [
                 "desserts"
-              ]
+              ],
+              "customer_values_justifications": {
+                "romantic setup": "The customer mentioned a \"romantic setup for Valentine’s\" in their review of Couscous Corner, highlighting the importance of ambiance in their dining experience.",
+                "flavorful dishes": "The customer highlighted the flavorful lamb stew at Couscous Corner and praised the truffle dishes at Truffle & More, indicating a preference for flavorful dishes.",
+                "knowledgeable staff": "The customer praised the knowledgeable server at Truffle & More for explaining truffle sourcing, highlighting the value placed on staff expertise."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer praised the knowledgeable server at Truffle & More for explaining truffle sourcing, indicating a preference for informed staff interactions."
+              },
+              "taste_preferences_justification": "The customer's email specifically requests multiple desserts, indicating a strong preference for sweet options over heavier main courses.",
+              "personal_interests_justifications": {
+                "desserts": "The customer's email explicitly expresses a preference for desserts over heavier main courses, highlighting their wife's love for sweets."
+              }
             },
             "generated_at": "2025-05-30T16:42:02.902676",
             "summary": "Values: romantic setup, flavorful dishes, knowledgeable staff. Returning customer. Taste preference: sweet. Likes staff who are: knowledgeable. Personal interests: desserts"
@@ -2825,7 +3393,18 @@
               "taste_preferences": "savory",
               "staff_interaction_preferences": [
                 "apologetic"
-              ]
+              ],
+              "customer_values_justifications": {
+                "quick service": "The positive review of Pizza Pop highlights the desire for quick service, as the customer mentions they would \"definitely return for a quick bite.\"",
+                "flavor balance": "The customer emphasized the need for flavor balance in their low-sodium request and criticized Poke Paradise for excessive sauce overpowering the dish."
+              },
+              "special_accommodations_justifications": {
+                "low-sodium diet": "The customer explicitly requested a low-sodium adjustment in their email due to a doctor's recommendation for a low-sodium diet."
+              },
+              "staff_interaction_preferences_justifications": {
+                "apologetic": "The customer noted that the staff at Poke Paradise was apologetic but not very helpful, indicating a preference for staff interaction that is more supportive."
+              },
+              "taste_preferences_justification": "The customer's request for a low-sodium option indicates a preference for savory flavors without excessive saltiness, as seen in their positive pizza review."
             },
             "generated_at": "2025-05-30T16:42:04.862730",
             "summary": "Values: quick service, flavor balance. Returning customer. Special needs: low-sodium diet. Taste preference: savory. Likes staff who are: apologetic"
@@ -2880,7 +3459,18 @@
               ],
               "staff_interaction_preferences": [
                 "knowledgeable"
-              ]
+              ],
+              "customer_values_justifications": {
+                "knowledgeable staff": "The customer highlighted the knowledgeable staff at Bistro Spice, who thoroughly explained each dish, indicating the value placed on staff expertise.",
+                "harmonious flavors": "The customer highlighted \"surprisingly harmonious flavors\" in their review of Bistro Spice, indicating a strong appreciation for flavor balance in their dining experience.",
+                "clean environment": "The customer highlighted the bright and clean atmosphere of Salad & Grill, indicating that a clean environment is valued."
+              },
+              "special_accommodations_justifications": {
+                "gift presentation with dessert": "The customer's email request for a special gift presentation with dessert indicates a desire for personalized service and memorable dining experiences."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer praised the staff's knowledge in the Bistro Spice review, highlighting their thorough explanations of each dish."
+              }
             },
             "generated_at": "2025-05-30T16:42:06.841908",
             "summary": "Values: knowledgeable staff, harmonious flavors, clean environment. Returning customer. Special needs: gift presentation with dessert. Likes staff who are: knowledgeable"
@@ -2932,7 +3522,15 @@
               "taste_preferences": "rich",
               "staff_interaction_preferences": [
                 "knowledgeable"
-              ]
+              ],
+              "customer_values_justifications": {
+                "local produce": "The customer highlighted Urban Vegan Eats' impressive supplier list for local produce, indicating a strong value placed on sourcing locally.",
+                "flavor-packed food": "The customer highlighted \"flavor-packed vegan bowls\" in their review of Urban Vegan Eats, indicating a strong preference for flavorful food."
+              },
+              "staff_interaction_preferences_justifications": {
+                "knowledgeable": "The customer praised Urban Vegan Eats for their knowledgeable staff who shared a supplier list, highlighting their expertise in local produce."
+              },
+              "taste_preferences_justification": "The customer praised Urban Vegan Eats for its flavor-packed dishes, indicating a strong preference for rich, flavorful food experiences."
             },
             "generated_at": "2025-05-30T16:42:08.595876",
             "summary": "Values: local produce, flavor-packed food. Returning customer. Taste preference: rich. Likes staff who are: knowledgeable"
@@ -2987,7 +3585,18 @@
               "taste_preferences": "savory",
               "staff_interaction_preferences": [
                 "attentive"
-              ]
+              ],
+              "customer_values_justifications": {
+                "experimental flavors": "The customer highlighted their enjoyment of the \"experimental ramen flavors\" at Pop-Up Ramen, indicating a value for unique culinary experiences.",
+                "quality toppings": "The customer highlighted the miso-butter corn topping as a standout feature in their Pop-Up Ramen review, indicating a preference for quality toppings."
+              },
+              "special_accommodations_justifications": {
+                "lactose intolerance": "The customer email explicitly mentions a lactose intolerance concern, indicating the need for special accommodations in the tasting menu."
+              },
+              "staff_interaction_preferences_justifications": {
+                "attentive": "The customer emphasized the slow service at Taco Bonanza despite acknowledging the server's efforts, indicating a preference for attentive staff interactions."
+              },
+              "taste_preferences_justification": "The customer's preference for savory flavors is indicated by their enjoyment of the miso-butter corn topping at Pop-Up Ramen."
             },
             "generated_at": "2025-05-30T16:42:11.139882",
             "summary": "Values: experimental flavors, quality toppings. Returning customer. Special needs: lactose intolerance. Taste preference: savory. Likes staff who are: attentive"
