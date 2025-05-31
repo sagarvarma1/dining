@@ -96,17 +96,36 @@ function App() {
     
     detailedData.diners.forEach(diner => {
       diner.reservations.forEach(reservation => {
+        // Count only special accommodations as "needs"
+        const specialAccommodationsCount = reservation.notes?.customer_insights?.special_accommodations?.length || 0;
+        
+        // Keep dietary restrictions separate for display purposes
+        const dietaryRestrictionsCount = reservation.orders.reduce((acc, order) => acc + order.dietary_tags.length, 0);
+        
+        // Calculate total order cost
+        const totalOrderCost = reservation.orders.reduce((sum, order) => sum + order.price, 0);
+        
         allReservations.push({
           ...reservation,
           guestName: diner.name,
           guestData: diner,
-          priority: calculatePriority(reservation, diner)
+          totalNeeds: specialAccommodationsCount, // Only special accommodations count as "needs"
+          totalCost: totalOrderCost,
+          needsBreakdown: {
+            specialAccommodations: specialAccommodationsCount,
+            dietaryRestrictions: dietaryRestrictionsCount
+          }
         });
       });
     });
     
-    // Sort by priority (highest first)
-    return allReservations.sort((a, b) => b.priority - a.priority);
+    // Sort by special accommodations (descending), then by price (descending)
+    return allReservations.sort((a, b) => {
+      if (a.totalNeeds !== b.totalNeeds) {
+        return b.totalNeeds - a.totalNeeds; // Most special needs first
+      }
+      return b.totalCost - a.totalCost; // Highest price first if tied
+    });
   };
 
   const formatDate = (dateString) => {

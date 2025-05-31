@@ -1486,4 +1486,26 @@ body {
     font-size: 1rem;
     min-width: 50px;
   }
+}
+
+/* Needs count styling */
+.needs-count {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 3rem;
+  text-align: center;
+  cursor: help;
+}
+
+.needs-count[title*="0 needs"] {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.needs-count:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 } 
