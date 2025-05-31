@@ -242,13 +242,15 @@ function App() {
   };
 
   const renderInsightBadge = (value, className, justification = null) => {
-    if (!value) return null;
+    if (!value && value !== false) return null;
+    
+    const displayText = typeof value === 'boolean' ? (value ? 'New Customer' : 'Returning Customer') : value;
     
     if (justification) {
       return (
         <div className="tooltip-container">
           <span className={`insight-badge ${className} has-tooltip`}>
-            {typeof value === 'boolean' ? (value ? 'New Customer' : 'Returning Customer') : value}
+            {displayText}
           </span>
           <div className="tooltip">
             {justification}
@@ -259,9 +261,16 @@ function App() {
     
     return (
       <span className={`insight-badge ${className}`}>
-        {typeof value === 'boolean' ? (value ? 'New Customer' : 'Returning Customer') : value}
+        {displayText}
       </span>
     );
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   if (showCalendar) {
@@ -453,6 +462,26 @@ function App() {
           )}
         </div>
       </main>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <a href="#" className="footer-link">Terms & policies</a>
+            <a href="#" className="footer-link">Privacy policy</a>
+          </div>
+          <div className="footer-right">
+            <span className="footer-link active-view" style={{textDecoration: 'underline'}}>Different Days View</span>
+            <a href="#" className="footer-link">Same Days View</a>
+            <a href="#" className="footer-link">Chef View</a>
+            <button onClick={scrollToTop} className="back-to-top">
+              Back to top
+            </button>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>© French Laudure 2024. All Rights Reserved</p>
+        </div>
+      </footer>
     </div>
   );
 }
