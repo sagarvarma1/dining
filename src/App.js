@@ -13,6 +13,8 @@ function App() {
   const [currentView, setCurrentView] = useState('different'); // 'different', 'same', 'chef'
   const [expandedCards, setExpandedCards] = useState({});
   const [chefViewType, setChefViewType] = useState('groups'); // 'groups' or 'dishes'
+  const [searchTerm, setSearchTerm] = useState('');
+  const [deletedTables, setDeletedTables] = useState(new Set());
 
   useEffect(() => {
     // Extract all unique reservation dates and sort them
@@ -338,53 +340,73 @@ function App() {
 
   // Chef View Functions
   const getGroupsData = () => {
-    return dishesData.parties.sort((a, b) => a.table_number - b.table_number);
+    return dishesData.parties
+      .filter(party => !deletedTables.has(party.party_id))
+      .filter(party => 
+        searchTerm === '' || 
+        party.party_id.toString().includes(searchTerm) ||
+        party.customer_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        party.dishes.some(dish => dish.name.toLowerCase().includes(searchTerm.toLowerCase()))
+      )
+      .sort((a, b) => a.table_number - b.table_number);
   };
 
   const getDishesData = () => {
     const dishesMap = new Map();
     
-    dishesData.parties.forEach(party => {
-      party.dishes.forEach(dish => {
-        const dishKey = dish.name;
-        if (!dishesMap.has(dishKey)) {
-          dishesMap.set(dishKey, {
-            name: dish.name,
-            variations: []
-          });
-        }
-        
-        // Create variation key based on dietary exceptions
-        const variationKey = dish.dietary_exceptions.length > 0 ? 
-          dish.dietary_exceptions.sort().join(', ') : 'standard';
-        
-        const existingVariation = dishesMap.get(dishKey).variations.find(v => v.variation === variationKey);
-        
-        if (existingVariation) {
-          existingVariation.orders.push({
-            party_id: party.party_id,
-            table_number: party.table_number,
-            customer_name: party.customer_name,
-            price: dish.price
-          });
-          existingVariation.quantity += 1;
-        } else {
-          dishesMap.get(dishKey).variations.push({
-            variation: variationKey,
-            dietary_exceptions: dish.dietary_exceptions,
-            quantity: 1,
-            orders: [{
+    // Normalize dish names to group similar dishes
+    const normalizeDishName = (dishName) => {
+      return dishName.replace(/^Boeuf\b/i, 'Beef');
+    };
+    
+    dishesData.parties
+      .filter(party => !deletedTables.has(party.party_id))
+      .forEach(party => {
+        party.dishes.forEach(dish => {
+          const normalizedName = normalizeDishName(dish.name);
+          const dishKey = normalizedName;
+          if (!dishesMap.has(dishKey)) {
+            dishesMap.set(dishKey, {
+              name: normalizedName,
+              variations: []
+            });
+          }
+          
+          // Create variation key based on dietary exceptions
+          const variationKey = dish.dietary_exceptions.length > 0 ? 
+            dish.dietary_exceptions.sort().join(', ') : 'standard';
+          
+          const existingVariation = dishesMap.get(dishKey).variations.find(v => v.variation === variationKey);
+          
+          if (existingVariation) {
+            existingVariation.orders.push({
               party_id: party.party_id,
               table_number: party.table_number,
               customer_name: party.customer_name,
               price: dish.price
-            }]
-          });
-        }
+            });
+            existingVariation.quantity += 1;
+          } else {
+            dishesMap.get(dishKey).variations.push({
+              variation: variationKey,
+              dietary_exceptions: dish.dietary_exceptions,
+              quantity: 1,
+              orders: [{
+                party_id: party.party_id,
+                table_number: party.table_number,
+                customer_name: party.customer_name,
+                price: dish.price
+              }]
+            });
+          }
+        });
       });
-    });
     
     return Array.from(dishesMap.values()).sort((a, b) => a.name.localeCompare(b.name));
+  };
+
+  const deleteTable = (tableId) => {
+    setDeletedTables(prev => new Set([...prev, tableId]));
   };
 
   if (showCalendar) {
@@ -633,22 +655,32 @@ function App() {
             <div className="chef-groups-view">
               <div className="reservations-summary">
                 <h3>All Tables: {groupsData.length} tables</h3>
+                <div className="search-container">
+                  <input
+                    type="text"
+                    placeholder="Search by table number, customer, or dish..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="search-input"
+                  />
+                </div>
               </div>
               
               <div className="groups-list">
                 {groupsData.map((party) => (
                   <div key={party.party_id} className="group-card">
+                    <button 
+                      className="delete-table-btn"
+                      onClick={() => deleteTable(party.party_id)}
+                      title="Remove this table"
+                    >
+                      ✕
+                    </button>
                     <div className="group-header">
                       <h4>Table {party.party_id}</h4>
-                      <div className="group-meta">
-                        <span className="customer-name">{party.customer_name}</span>
-                        <span className="party-size">{party.group_size} guests</span>
-                        <span className="total-cost">${party.total_cost}</span>
-                      </div>
                     </div>
                     
                     <div className="group-dishes">
-                      <h5>Dishes & Exceptions:</h5>
                       <div className="dishes-list">
                         {party.dishes.map((dish, dishIdx) => (
                           <div key={dishIdx} className="dish-item">
@@ -704,7 +736,7 @@ function App() {
                       {dish.variations.map((variation, varIdx) => 
                         variation.orders.map((order, orderIdx) => (
                           <span key={`${varIdx}-${orderIdx}`} className="table-chip">
-                            Table {order.party_id}
+                            {order.party_id}
                             {variation.dietary_exceptions.length > 0 && (
                               <span className="chip-exceptions">
                                 ({variation.dietary_exceptions.join(', ')})
