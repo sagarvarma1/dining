@@ -344,7 +344,7 @@ function App() {
       .filter(party => !deletedTables.has(party.party_id))
       .filter(party => 
         searchTerm === '' || 
-        party.party_id.toString().includes(searchTerm) ||
+        party.party_id.toString() === searchTerm ||
         party.customer_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         party.dishes.some(dish => dish.name.toLowerCase().includes(searchTerm.toLowerCase()))
       )
